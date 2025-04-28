@@ -1,0 +1,624 @@
+* {margin:0; list-style:none; padding:0; color:#373435; font-size:14px;}
+
+img {border:none;}
+a {text-decoration:none;}
+:hover {-webkit-transition: all .2s; -moz-transition: all .2s; -ms-transition: all .2s; -o-transition: all .2s; transition: all .2s;}
+
+.clear {clear:both;}
+.oculto {display:none;}
+.disabled {display:none;}
+option {color:#282829;}
+.lb-caption {color:#FFF;}
+
+input[type=button] {-webkit-appearance:none;}
+input[type=submit] {-webkit-appearance:none;}
+select {-webkit-appearance:none;}
+
+body {width:100%; height:100%; overflow-x:hidden;}
+
+#tudo {width:100%;}
+
+#tudo .blackout {width:100%; height:100%; position:fixed; top:0; left:0; z-index:100000000; background:rgba(0,0,0,0.7);}
+#tudo #popup {width:370px; height:291px; position:fixed; padding:30px 15px; z-index:100000001; left:50%; top:50%; margin-left:-200px; margin-top:-175.5px; background-color:#40c351; border-radius:10px;}
+#tudo #popup .x {width:28px; height:26px; position:absolute; padding-top:0px; margin-left:369px; margin-top:-42px; cursor:pointer; text-align:center; background-color:#004018; color:#FFF; font-size:15px; font-weight:bold; border-radius:100%; transition: all .2s;display: flex; align-items: center; justify-content: center;}
+#tudo #popup .x:hover {background-color:#035e25; transition: all .2s;}
+#tudo #popup .logo {display:table; margin:0 auto;}
+#tudo #popup .titulo {font-size:18px; line-height:25px; color:#FFF; text-align:center; font-weight:600; margin-top:15px; margin-bottom:10px; }
+#tudo #popup .titulo span {font-size:18px; color:#FFF; font-weight:800; }
+#tudo #popup .titulo2 {font-size:13px; color:#FFF; text-align:center; margin-bottom:20px; }
+#tudo #popup .campo-nome {display:table; margin:0 auto;}
+#tudo #popup .campo-nome input {width:270px; border:none;  padding:7px 10px; outline:none; border-radius:5px;}
+#tudo #popup .campo-whats {display:table; margin:0 auto; margin-top:15px;}
+#tudo #popup .campo-whats input {width:270px; border:none;  padding:7px 10px; outline:none; border-radius:5px;}
+#tudo #popup .campos-mensagem {display:table; margin:0 auto; margin-top:15px;}
+#tudo #popup .campos-mensagem textarea {width:270px; border:none; height:50px; padding:5px 10px; outline:none; border-radius:5px;}
+#tudo #popup .botao-envia {display:table; margin:0 auto; margin-top:15px; }
+#tudo #popup .botao-envia input {padding:7px 20px; display:table; margin:0 auto; cursor:pointer; padding-left:35px; color:#FFF; font-weight:400; font-size:13px; border:none; background: url(../i/quebrado/whats-verde.svg) 12px center, linear-gradient(#004018, #017a2f); background-repeat:no-repeat, repeat; background-size:18px, cover; border-radius:15px; transition: all .3s;}
+#tudo #popup .botao-envia input:hover {background: url(../i/quebrado/whats-verde.svg) 12px center, linear-gradient(#017a2f, #004018); background-repeat:no-repeat, repeat; background-size:18px, cover; background-size:18px; transition: all .3s;}
+
+#tudo .normal {width:100%; position:fixed; z-index:60; transition: all .3s;}
+#tudo .normal #repete-topo {width:100%; padding-bottom:10px; padding-top:10px; position:relative; z-index:2; background-color: #012d3a00; box-shadow: 0 4px 8px rgba(0, 0, 0, 0); transition: all 0.3s;}
+#tudo .normal #repete-topo #conteudo-topo {width:1200px; margin:0 auto; transition: all .3s; display: flex;}
+#tudo .normal #repete-topo #conteudo-topo #esq-topo {width:170px; transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #esq-topo #logo-topo {width: 170px; margin:0 auto; transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #esq-topo #logo-topo .logo a {width:170px; display:block; transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo {width:100%;  transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #redes {display: flex; justify-content: end; align-items: center;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #redes .whatsapp{ font-weight: 500; padding: 5px 5px; padding-left: 36px; border-radius: 5px; margin-right: 10px; color: #00c445; background: #00000000 url('../i/quebrado/whats-verde.svg') 6px center no-repeat; background-size: 25px; cursor: pointer;transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #redes .whatsapp:hover{ border-radius: 5px; background: #b0ffcb url('../i/quebrado/whats-verde.svg') 6px center no-repeat; background-size: 25px;transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #redes .facebook{ padding: 14px; margin-right: 4px; background: url('../i/quebrado/Facebook.svg') center center no-repeat; background-size: 25px;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #redes .instagram{ padding: 14px; background: url('../i/quebrado/Instagram.svg') center center no-repeat; background-size: 25px;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #mostra-menu {display: flex; justify-content: end; margin-top: 10px; transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #mostra-menu p {display:table; float:left; margin-left:10px; margin-right:10px; transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #mostra-menu p a { display:block; border:1px solid #ffffff00; padding: 5px 15px ;border-radius: 10px ; font-weight: 300; font-size: 17px; color:#ffffff; transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #mostra-menu p a:hover { border:1px solid #ffffff; padding: 5px 15px; border-radius: 10px ;  color: #ffffff; transition: all .3s;}
+#tudo .normal #repete-topo #conteudo-topo #dir-topo #mostra-menu .ativo a {display:block; border:1px solid #ffffff; font-weight: 300; align-items: center;; font-size: 17px; color:#ffffff;   padding: 5px 15px; border-radius: 10px ;  transition: all .3s;}
+
+#tudo .interno {width:100%; position:fixed; z-index:60; transition: all .3s;}
+#tudo .interno #repete-topo {width:100%; padding-bottom:10px; padding-top:10px; position:relative; z-index:2; background-color: #012d3a00; box-shadow: 0 4px 8px rgba(0, 0, 0, 0); transition: all 0.3s;}
+#tudo .interno #repete-topo #conteudo-topo {width:1200px; margin:0 auto; transition: all .3s; display: flex;}
+#tudo .interno #repete-topo #conteudo-topo #esq-topo {width:170px; transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #esq-topo #logo-topo {width: 170px; margin:0 auto; transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #esq-topo #logo-topo .logo a {width:170px; display:block; transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo {width:100%;  transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #redes {display: flex; justify-content: end; align-items: center;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #redes .whatsapp{ font-weight: 500; padding: 5px 5px; padding-left: 36px; border-radius: 5px; margin-right: 10px; color: #00c445; background: #00000000 url('../i/quebrado/whats-verde.svg') 6px center no-repeat; background-size: 25px; cursor: pointer;transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #redes .whatsapp:hover{ border-radius: 5px; background: #b0ffcb url('../i/quebrado/whats-verde.svg') 6px center no-repeat; background-size: 25px;transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #redes .facebook{ padding: 14px; margin-right: 4px; background: url('../i/quebrado/Facebook.svg') center center no-repeat; background-size: 25px;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #redes .instagram{ padding: 14px; background: url('../i/quebrado/Instagram.svg') center center no-repeat; background-size: 25px;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #mostra-menu {display: flex; justify-content: end; margin-top: 10px; transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #mostra-menu p {display:table; float:left; margin-left:10px; margin-right:10px; transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #mostra-menu p a { display:block; border:1px solid #ffffff00; padding: 5px 15px ;border-radius: 10px ; font-weight: 300; font-size: 17px; color:#ffffff; transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #mostra-menu p a:hover { border:1px solid #ffffff; padding: 5px 15px; border-radius: 10px ;  color: #ffffff; transition: all .3s;}
+#tudo .interno #repete-topo #conteudo-topo #dir-topo #mostra-menu .ativo a {display:block; border:1px solid #ffffff; font-weight: 300; align-items: center;; font-size: 17px; color:#ffffff;   padding: 5px 15px; border-radius: 10px ;  transition: all .3s;}
+
+#tudo .scroll {width:100%; position:fixed; z-index:60; transition: all .3s;}
+#tudo .scroll #repete-topo {width:100%; padding-bottom:10px; padding-top:10px; position:relative; z-index:2; background-color: #041c40; box-shadow: 0 4px 8px rgba(0, 0, 0, 0); transition: all 0.3s;}
+#tudo .scroll #repete-topo #conteudo-topo {width:1200px; margin:0 auto; transition: all .3s; display: flex;}
+#tudo .scroll #repete-topo #conteudo-topo #esq-topo {width:85px; transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #esq-topo #logo-topo {width: 85px; margin:0 auto; transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #esq-topo #logo-topo .logo a {width:85px; display:block; transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo {width:100%;  transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #redes {display: flex; justify-content: end; align-items: center;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #redes .whatsapp{ font-weight: 500; padding: 5px 5px; padding-left: 36px; border-radius: 5px; margin-right: 10px; color: #00c445; background: #00000000 url('../i/quebrado/whats-verde.svg') 6px center no-repeat; background-size: 25px; cursor: pointer;transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #redes .whatsapp:hover{ border-radius: 5px; background: #b0ffcb url('../i/quebrado/whats-verde.svg') 6px center no-repeat; background-size: 25px;transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #redes .facebook{ padding: 14px; margin-right: 4px; background: url('../i/quebrado/Facebook.svg') center center no-repeat; background-size: 25px;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #redes .instagram{ padding: 14px; background: url('../i/quebrado/Instagram.svg') center center no-repeat; background-size: 25px;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #mostra-menu {display: flex; justify-content: end; margin-top: 10px; transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #mostra-menu p {display:table; float:left; margin-left:10px; margin-right:10px; transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #mostra-menu p a { display:block; border:1px solid #ffffff00; padding: 5px 15px ;border-radius: 10px ; font-weight: 300; font-size: 17px; color:#ffffff; transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #mostra-menu p a:hover { border:1px solid #ffffff; padding: 5px 15px; border-radius: 10px ;  color: #ffffff; transition: all .3s;}
+#tudo .scroll #repete-topo #conteudo-topo #dir-topo #mostra-menu .ativo a {display:block; border:1px solid #ffffff; font-weight: 300; align-items: center;; font-size: 17px; color:#ffffff;   padding: 5px 15px; border-radius: 10px ;  transition: all .3s;}
+
+
+#tudo #conteudo{width: 100%;}
+#tudo #conteudo #repete-conteudo {width: 100%; }
+#tudo #conteudo #repete-conteudo #repete-banners {width:100%; }
+#tudo #conteudo #repete-conteudo #repete-filtro-banner {width:100%; padding-bottom:40px; margin-top:-34px;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro {width:550px; margin:0 auto;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro {padding:20px 20px; background-color:#ffffffdc; border-radius:15px; box-shadow: -6px 5px 20px 3px }
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro .titulo-filtro {text-align: center; color: #353535; font-size: 44px; margin-top: 25px; margin-bottom: 25px;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro {width:100%;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros { margin-top: 0px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros #titulo-filtro{display: block; font-size: 26px; margin-bottom: 5px; margin-top: 20px; font-weight: 600; color: #041c40;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros select {width:240px; height:40px; cursor:pointer;  position:relative; z-index:31; font-weight:300; padding:0px 15px; outline:none; color:#313237; background:transparent; border:none;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros select option {color:#111111;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .campo-select {position:relative; height:40px; border-radius: 10px; background-color:#FFF;  border: 1px solid #041c40;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .campo-select:before {content:""; display:inline-block; cursor:pointer; z-index:30; vertical-align:middle; position:absolute; margin-top:14px; right:10px; width:14px; height:14px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:6px; transform:rotate( 270deg); transition:.2s linear;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection {height:40px; overflow-y:auto; border-radius: 10px ; padding-left:15px; color:#444; outline:none; padding-right:15px; cursor:pointer; border-radius: 10px; border: none;  background:none; align-items: center; display: flex;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection input { margin-left:0px; margin-top: 0px;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection input::placeholder {color:#313237; font-weight:300;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-selection__clear {margin-right:20px;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-selection__choice {margin-top:3px;  line-height:20px;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-selection__rendered {padding:0px;  margin-top: 0px;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-search {}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .cidade {display:table;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros #carrega-bairro {display:table;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .imovel-busca {display:table;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .ordenar-por {display:table;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro #outros-filtros .label {font-size:13px; display:block; line-height:13px; margin-bottom:5px;} 
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro .botao-buscar {margin-top: 40px;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro .botao-buscar input {cursor: pointer; width: 100%;  padding: 15px 20px 15px 60px; font-size: 24px; font-weight: 400 ; color: #FFF; border: none; background: #041c40 url(../i/quebrado/busca.svg) 165px  center no-repeat; background-size: 32px; border-radius: 8px; transition: all .2s;}
+#tudo #conteudo #repete-conteudo #repete-filtro-banner #conteudo-filtro #filtro #bloco-filtro .botao-buscar input:hover {cursor: pointer; width: 100%;  padding: 15px 20px 15px 60px; font-size: 24px; font-weight: 400 ; color: #FFF; border: none; background: #0b4bac url(../i/quebrado/busca.svg) 165px  center no-repeat; background-size: 32px; border-radius: 8px; transition: all .2s;}
+.select2-container--default .select2-selection--single .select2-selection__rendered {color: #313237!important; font-weight: 300!important;}
+.select2-container--default .select2-selection--single .select2-selection__arrow {display: none!important;}
+#tudo #conteudo #repete-conteudo #repete-banners .imagem-banner {position: relative; display: flex; align-content: center;}
+#tudo #conteudo #repete-conteudo #repete-banners .imagem-banner #titulo-banner { position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%);  border-radius: 20px; background-color: #00303edc; padding: 10px 60px; text-align: center; }
+#tudo #conteudo #repete-conteudo #repete-banners .imagem-banner #titulo-banner .titulo{font-size: 32px; font-weight: bold; color: white;}
+#tudo #conteudo #repete-conteudo #repete-banners .imagem-banner #seta {position: absolute; bottom: 0%; margin: 0; padding: 0; left: 50%; transform: translateX(-50%); animation: sobeDesce 2s ease-in-out infinite;}
+@keyframes sobeDesce { 0%, 100% { transform: translateX(-50%) translateY(0); }50% { transform: translateX(-50%) translateY(-10px); }}
+#tudo #conteudo #repete-conteudo #repete-destaques {width:100%; }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques {display:table; margin:0 auto; padding-bottom: 20px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #bloco-titulo { margin-bottom: 15px; margin-top: 90px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #bloco-titulo .titulo {font-size: 52px;display: flex;  color: #00343f;  font-weight: bold; }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #bloco-titulo .titulo span {font-size: 52px;display: flex; color: #cda275; margin-left: 15px; font-family: 'campora-bold';}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #bloco-titulo .sub-titulo { margin-top: 10px; font-size: 20px;display: flex; color: #00343f;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #bloco-titulo #linha {width: 45%; height: 3px ; background-image: linear-gradient(to right, #cda275 63%, #cda37500 98%); }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques {width:1200px;margin-top: 40px; display: flex; flex-wrap: wrap;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel {width: 386px; margin-bottom:20px; }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a {width: 366px; display: block; position: relative; background-color: #ffffff;  box-shadow: 0px 0px 20px -8px #000000; padding: 10px; border-radius: 10px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a .bloco-imagem {width:100%; height:275px; position:relative; background-color:#FFF; overflow:hidden; transition: all .3s; }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a .bloco-imagem .imagem {width:100%; height:275px; position:relative; overflow:hidden; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a:hover .bloco-imagem .imagem {width:100%; height:275px; position:relative; overflow:hidden;  transform:scale(1.09); transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #tipo-venda .tipo{ padding: 8px 10px 8px 40px; color: white; }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados {}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #nome-imovel {margin-top: 10px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #nome-imovel .nome { height: 47px; font-size: 22px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 100%; font-weight: 700;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #local {margin-top: 5px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #local .bairro{ font-size:18px; font-weight: 400; color: #666;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #local #cidade {display: flex; justify-content: space-between;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #local #cidade .cidade{ font-size:16px;font-weight: 300; color: #666;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #local #cidade .tipoC {display: flex ;align-items: center; padding: 0px 0px 0px 24px; color: #666;  background: transparent url(../i/quebrado/venda.svg) 1px center no-repeat; background-size: 20px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones {width: 356px; display: flex; background: #00303e; padding: 5px 15px 5px 15px; position: relative; left: -10px; margin-top: 8px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones #espaco {display: flex; justify-content: space-between;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .tipo{ padding: 3px 15px 3px 32px; color: white; }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .quartos { text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:15px; font-weight:400; color:#ffffff; background:transparent url('../i/quebrado/quarto.svg') left center no-repeat; background-size:22px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .banheiros { text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:15px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/banheiro.svg') left center no-repeat; background-size:17px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .garagem { text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:15px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/garagem.svg') left center no-repeat; background-size:20px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .area {text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:15px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/metragem.svg') left center no-repeat; background-size:20px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .suite {text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:15px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/suite.svg') left center no-repeat; background-size:20px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #alinha-infos { display: flex; justify-content: space-between; margin-top: 15px; margin-bottom: 5px;  }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #alinha-infos .preco { font-size: 24px; text-align: center; align-items: center; text-transform: uppercase; color: #00303e; line-height: 20px; display: flex; justify-content: end; font-weight: 600;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a #conteudo-dados #alinha-infos .detalhes { font-size: 14px; text-align: center; font-weight: 400; border-radius: 0px; color: #ffffff; padding: 3px 10px; background-color: #cda373; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques #bloco-imovel a:hover #conteudo-dados #alinha-infos .detalhes { transition: all .3s;justify-content: end; background-color: #eec79b;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques .ver-mais  {width: 100%;text-align: center; margin-top: 50px; margin-bottom:50px;}
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques .ver-mais a { font-size: 20px; background-color: #cea271 ; padding: 10px 15px; border-radius: 10px; color: #0c3843;  }
+#tudo #conteudo #repete-conteudo #repete-destaques #conteudo-destaques #mostra-destaques .ver-mais a:hover {background-color:#eec79b; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque {width:100%; padding-bottom: 20px; background-color: #f2f2f2;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque {display:table; margin:0 auto; margin-bottom:15px;  }
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #bloco-titulo {margin-bottom: 15px; margin-top: 80px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #bloco-titulo .titulo {font-size: 52px;display: flex;  color: #00343f;  font-family: 'campora-bold';}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #bloco-titulo #linha {width: 45%; height: 3px ; background-image: linear-gradient(to right, #cda275 63%, #cda37500 98%); }
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #bloco-titulo .sub-titulo { margin-top: 10px; margin-bottom: 40px; font-size: 20px; display: flex; color: #00343f;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis {width:1200px; display: flex; flex-wrap: wrap;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel {width: 285px; margin-bottom:20px; margin-right: 20px; }
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a {width: 265px; display: block; position: relative; background-color: #ffffff;  box-shadow: 0px 0px 20px -8px #000000; padding: 10px; border-radius: 10px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a .bloco-imagem {width:100%; height:199px; position:relative; background-color:#FFF; overflow:hidden; transition: all .3s; }
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a .bloco-imagem .imagem {width:100%; height:199px; position:relative; overflow:hidden; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a:hover .bloco-imagem .imagem {width:100%; height:199px; position:relative; overflow:hidden;  transform:scale(1.1); transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados {}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #nome-imovel {margin-top: 10px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #nome-imovel .nome { height: 39px; font-size: 18px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 100%; font-weight: 700;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #local {margin-top: 5px; line-height: 120%;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #local .bairro{ font-size:16px; font-weight: 400; color: #666;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #local #cidade {display: flex; justify-content: space-between;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #local #cidade .cidade{ font-size:14px;font-weight: 300; color: #666;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #local #cidade .tipoC {display: flex ;align-items: center; padding: 2px 0px 2px 24px; color: #666;  background: transparent url(../i/quebrado/venda.svg) 1px center no-repeat; background-size: 20px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones { width: 100%; display: flex; background: #00303e; padding: 2px  10px 2px  10px; position: relative; left: -10px; margin-top: 8px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco {display: flex; justify-content: space-between;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .tipo{ font-size: 12px; padding: 3px 5px 3px 25px; color: white; }
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .quartos { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff; background:transparent url('../i/quebrado/quarto.svg') left center no-repeat; background-size:20px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .banheiros {font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/banheiro.svg') left center no-repeat; background-size:15px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .garagem { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/garagem.svg') left center no-repeat; background-size:18px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .area { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/metragem.svg') left center no-repeat; background-size:18px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .suite { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/suite.svg') left center no-repeat; background-size:18px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #alinha-infos { display: flex; justify-content: space-between; margin-top: 15px; margin-bottom: 5px;  }
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #alinha-infos .preco { font-size: 22px; text-align: center; align-items: center; text-transform: uppercase; color: #00303e; line-height: 20px; display: flex; justify-content: end; font-weight: 600;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a #conteudo-dados #alinha-infos .detalhes { font-size: 12px; text-align: center; font-weight: 400; border-radius: 0px; color: #ffffff; padding: 2px 5px; background-color: #cda373; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque #mostra-imoveis #bloco-imovel a:hover #conteudo-dados #alinha-infos .detalhes { transition: all .3s;justify-content: end; background-color: #eec79b;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque .ver-mais  {width: 100%;text-align: center; margin-top: 50px; margin-bottom:50px;}
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque .ver-mais a { font-size: 20px; background-color: #cea271 ; padding: 10px 15px; border-radius: 10px; color: #0c3843;  }
+#tudo #conteudo #repete-conteudo #repete-imoveis-destaque #conteudo-imoveis-destaque .ver-mais a:hover {background-color:#eec79b; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos {width:100%; background: url('../i/quebrado/quem-somos.jpg') center center no-repeat; background-size: 100%;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos .imagem-quemSomos {width:40%; right:0; height:100%; position:absolute;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos {width:1200px; display: flex; justify-content: end; margin:0 auto; padding-top:60px; padding-bottom:60px;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos {width:715px; }
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos a {display: flex; justify-content: end;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos #bloco-dados {width:550px;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos #bloco-dados #bloco-titulo { margin-bottom:25px;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos #bloco-dados #bloco-titulo .titulo {font-size: 48px;  margin-bottom: 8px; color: #ffffff; font-weight: bold;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos #bloco-dados #bloco-titulo #linha {width: 90%; height: 3px; background-image: linear-gradient(to right, #cda275 -3%, #cda37500 100%);}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos .descricao {line-height:190%; font-size:15px; color:#ffffff; text-align:justify;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos .botao {display:table; margin-top:20px; padding:3px 20px; color:#FFF; font-weight:500; background-color:#eb3236; font-size:16px; border-radius:20px;}
+#tudo #conteudo #repete-conteudo #repete-quemSomos #conteudo-quemSomos #bloco-quemSomos .botao:hover {background-color:#ef4246; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-blog {width: 100%; padding: 90px 0px; background-color: #ffffff;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog {width:1200px; margin:0 auto;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #bloco-titulo { margin-bottom: 50px; margin-top: 0px;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #bloco-titulo .titulo {font-size: 52px;display: flex;  color: #00343f;  font-weight: bold; }
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #bloco-titulo .titulo span {font-size: 52px;display: flex; color: #cda275; margin-left: 15px; font-family: 'campora-bold';}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #bloco-titulo #linha {width: 45%; height: 3px ; background-image: linear-gradient(to right, #cda275 63%, #cda37500 98%); }
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog {width:1200px; margin-top:40px;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog {width:373px; float:left; margin-right:40px; position:relative; background-color:#FFF; border-radius: 50px 50px 0px 0px; transition: all .2s; }
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog .imagem {width:373px; height:230px; border-radius: 50px 50px 0px 0px;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog #fundo {background-color: #012c3c ; padding-top: 1px;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-nome {  height:60px; overflow:hidden;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-nome .nome {text-align:center; font-size:20px; line-height:23px; font-weight:500; color:#ffffff; padding:  10px 10px 0px 10px; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-descricao {display: flex; height: 50px; padding: 5px 10px 10px 10px; overflow: hidden;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-descricao .descricao{ font-size:12px; color:#ffffff; text-align:center; line-height:140%; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog #fundo #fundo-confira { padding-left: 10px; padding-right: 10px;  padding-bottom: 20px; padding-top: 10px; display: flex; justify-content: center;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog #fundo #fundo-confira .confira { padding:  3px 10px 3px 25px;  color: #ffffff; font-size: 14px; font-weight: 100; background: #cda373 url('../i/quebrado/ler-mais.svg') 5px center no-repeat; background-size: 15px;  transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog #bloco-blog:hover #fundo #fundo-confira .confira { background-color: #eec79b ; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog .owl-nav .owl-prev {width:40px; height:40px; position:absolute; left:-60px; top:44%; margin-top:-15px; color:#ff0000; outline:none; font-size:0.001px; background: url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 35px;transform:rotate(180deg); transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog .owl-nav .owl-prev span {color:#FFF; font-size:0.001px;}    
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog .owl-nav .owl-next {width:40px; height:40px; position:absolute; right:-60px; top:44%; margin-top:-15px; color:#FFF; outline:none; font-size:0.001px; background: url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 35px;  transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog .owl-nav .owl-next span {color:#FFF; font-size:0.001px;} 
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog .owl-dots {display:table; margin:0 auto; position:relative; z-index:51; margin-top:25px;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog .owl-dots .owl-dot {display:block; width:11px; height:11px; margin-left:3px; margin-right:3px; float:left; border-radius:100%; background-color:#666;}
+#tudo #conteudo #repete-conteudo #repete-blog #conteudo-blog #mostra-blog .owl-dots .active {display:block; width:11px; height:11px; border-radius:100%; background-color:#012c3c;}
+#tudo #conteudo #repete-conteudo #repete-instagram {width:100%; height:601px; margin-bottom: 20px; background:transparent url('../i/quebrado/instagram.jpg') center center no-repeat;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram{width: 1200px; margin: 0 auto; display: flex; justify-content: end;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram {width: 693px;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo { display: flex; position: relative;line-height: 340%; margin-top: 50px;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo img{position: absolute; right: -55px; }
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo #bloco-titulo{margin-left: 34px;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo #bloco-titulo .titulo1{ font-size: 52px; display: flex;  align-items: center; color: #ffffff; font-weight: bold;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo #bloco-titulo .titulo2{ font-size: 52px; display: flex;  align-items: center; color: #ffffff; font-weight: bold;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo #bloco-titulo .titulo2 span{ font-size:52px; margin-left: 15px; color:#cda275;  display: flex; align-items: center; font-family: 'campora-bold';}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo #bloco-titulo #linha{width: 45%;  height: 3px ;margin-top: 15px; background-image: linear-gradient(to right, #cda275 63%, #cda37500 98%); }
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #titulo #bloco-titulo .sub-titulo { margin-top: 15px; font-size: 20px;display: flex; color: #ffffff; line-height: 100%;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram .acessar  {width: 100%;text-align: center; margin-top: 40px; }
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram .acessar a { font-size: 20px; background-color: #cea271 ; padding: 10px 15px; border-radius: 10px; color: #0c3843;  }
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram .acessar a:hover {background-color:#eec79b; transition: all .3s;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #mostra-instagram {margin-top: 35px; display: flex; justify-content: center;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #mostra-instagram #bloco-instagram {width:200px; margin-right:15px; margin-top:25px; float:left; position:relative;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #mostra-instagram #bloco-instagram .imagem-instagram {width:200px; height:200px; position:relative; z-index:2; border-radius:10px;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #mostra-instagram #bloco-instagram .hover-image {width:200px; height:200px; position:absolute; z-index:5; background:rgba(0, 0, 0, 0); background-position:center, center; border-radius: 10px; transition:.2s linear; box-shadow: -8px 14px 10px 0px #19436d47;}  
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #mostra-instagram #bloco-instagram:hover .hover-image {width:200px; height:200px; position:absolute; z-index:5; background:rgba(0,0,0,0.6) url('../i/quebrado/imagem.svg') center center no-repeat; background-size:40px; transition:.2s linear;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #mostra-instagram #bloco-instagram .hover-play {width:200px; height:200px; position:absolute; z-index:5; background:rgba(0, 0, 0, 0); background-position:center, center; border-radius: 10px ; transition:.2s linear;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #mostra-instagram #bloco-instagram:hover .hover-play {width:200px; height:200px; position:absolute; z-index:5; background:rgba(0,0,0,0.6) url('../i/quebrado/play.svg') center center no-repeat; background-size:40px; transition:.2s linear;}
+#tudo #conteudo #repete-conteudo #repete-instagram #alinha-instagram #conteudo-instagram #visite{width: 100%;}
+
+#tudo #rodape #repete-rodape {width:100%; padding-top:10px; padding-bottom: 10px; background-color: #F2F2F2;}
+#tudo #rodape #repete-rodape #conteudo-rodape {width:1200px; margin:0 auto;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape {width:1200px; float:left; display: flex;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site {width: 50%; }
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site .endereco {display: flex; justify-content: end;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site .endereco a { font-size: 18px; padding: 5px 0px 5px 37px; background:transparent url('../i/quebrado/local.svg') left center no-repeat; background-size:35px;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site #creci {display: flex; justify-content: end; margin-top: 15px;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site #creci p{padding: 5px 0px 5px 36px; background:transparent url('../i/quebrado/casa-rodape.svg') left center no-repeat; background-size:32px; cursor:pointer;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site .celular a {padding: 12px 20px; background:transparent url('../i/quebrado/whats.svg') center center no-repeat; background-size:35px;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site .email a {padding: 12px 12px 12px 25px; background:transparent url('../i/quebrado/email.svg') center center no-repeat; background-size:35px;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #dados-site .instagram a {padding: 12px 25px; background:transparent url('../i/quebrado/instagram-rodape.svg') center center no-repeat; background-size:35px;}
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #logo-rodape {position:relative; border-radius:15px; width: 50%; }
+#tudo #rodape #repete-rodape #conteudo-rodape #col-esq-rodape #logo-rodape .logo a { display:block;}
+#tudo #rodape #repete-copy {width:100%; padding-top:5px; padding-bottom:5px; background-color:#F2F2F2; border-top: 1px solid #00343f ;}
+#tudo #rodape #repete-copy #conteudo-copy {width:1200px; margin:0 auto;}
+#tudo #rodape #repete-copy #conteudo-copy .copy {color:#00343f; font-size:13px; padding-top:3px; float:left;}
+#tudo #rodape #repete-copy #conteudo-copy .softbest {float:right;}
+
+#conteudo-interno {width:100%; padding-top:180px; min-height:643px;}
+#conteudo-interno #bloco-titulo  { justify-content: center; display: grid; text-align: center;  margin-top: 30px; margin-bottom: 30px;}
+#conteudo-interno #bloco-titulo .titulo {text-align: center; color: #042c2b; font-size:38px; font-weight: 600;}
+
+#conteudo-interno .botao-topo {height: 0px; text-align: end; position: relative; top: -55px;}
+#conteudo-interno .botao-bottom {text-align: center; }
+#conteudo-interno .botao-topo a:before {content:""; display: inline-block; cursor: pointer; vertical-align: middle; position: absolute; margin-top: 3px; margin-left: -20px; width: 0; height: 0;border-bottom: 7px solid transparent; border-top: 7px solid transparent; border-right: 10px solid #042c2b; transition: .2s linear;}
+#conteudo-interno .botao-bottom a:before {content:""; display: inline-block; cursor: pointer; vertical-align: middle; position: absolute; margin-top: 3px; margin-left: -20px; width: 0; height: 0;border-bottom: 7px solid transparent; border-top: 7px solid transparent; border-right: 10px solid #042c2b; transition: .2s linear;}
+
+#conteudo-interno #conteudo-quemSomos {width:1200px; margin:0 auto; margin-top:30px; margin-bottom: 40px;}
+#conteudo-interno #conteudo-quemSomos .imagem-quemSomos {float:left; margin-right:30px; margin-bottom:10px; overflow:hidden; border-radius:15px;}
+#conteudo-interno #conteudo-quemSomos .descricao {line-height:180%;}
+#conteudo-interno #conteudo-quemSomos .descricao p {font-size:16px; color:#585858; text-align: justify;}
+#conteudo-interno #conteudo-quemSomos .descricao span {font-size:16px; color:#585858;}
+#conteudo-interno #conteudo-quemSomos .descricao div {font-size:16px; color:#585858;}
+#conteudo-interno #conteudo-quemSomos .descricao strong {font-size:18px; color:#121212;}
+#conteudo-interno #conteudo-quemSomos .descricao li {font-size:16px; color:#585858; list-style:disc; margin-left:15px;}
+#conteudo-interno #conteudo-quemSomos .descricao img {border-radius:15px;}
+#conteudo-interno #conteudo-quemSomos .descricao h1 {font-size:20px; color:#121212;}
+#conteudo-interno #conteudo-quemSomos .descricao h2 {font-size:18px; color:#121212; padding-bottom:10px;}
+#conteudo-interno #conteudo-quemSomos .descricao h3 {font-size:16px; color:#121212;}
+#conteudo-interno #conteudo-quemSomos #bloco-itens {margin-top:40px; border-radius:15px;}
+#conteudo-interno #conteudo-quemSomos #bloco-itens #item {width:262px; float:left; margin-right:50px;}
+#conteudo-interno #conteudo-quemSomos #bloco-itens #item .icone {display:table; margin:0 auto;}
+#conteudo-interno #conteudo-quemSomos #bloco-itens #item .nome {font-size:17px; padding-top:15px; text-align:center; font-weight:300; text-transform:uppercase; padding-bottom:2px; color:#585858;}
+#conteudo-interno #conteudo-quemSomos #bloco-itens #item .nome b {font-size:17px; padding-top:5px; font-weight:600; padding-bottom:2px; color:#191919;}
+#conteudo-interno #conteudo-quemSomos #bloco-itens #item .descricao {font-size:12px; text-align:justify; padding-top:5px; color:#191919;}
+#conteudo-interno #conteudo-quemSomos #mais-imagens {width:1200px;}
+#conteudo-interno #conteudo-quemSomos #mais-imagens .imagem {width:386px; float:left; margin-right:20px; margin-top:20px;}
+#conteudo-interno #filtro-interno {width:100%; padding-bottom:20px;}
+#conteudo-interno #filtro-interno #conteudo-filtro {width:1200px; margin:0 auto;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro {padding:20px 15px; background-color:#00303edc; border-radius:15px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro {width:100%;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros { margin-top: 0px; display: flex; align-items: center; justify-content: center;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros #titulo-filtro{display: block; font-size: 22px; color: #ffffff; margin-bottom: 10px; }
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros select {width:180px; height:35px; cursor:pointer; font-size:15px; position:relative; z-index:31; font-weight:500; padding:0px 15px; outline:none; color:#313237; background:transparent; border:none;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros select option {color:#111111; font-size:14px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .campo-select {position:relative; height:35px; border-radius: 10px; background-color:#FFF;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .campo-select:before {content:""; display:inline-block; cursor:pointer; z-index:30; vertical-align:middle; position:absolute; margin-top:13px; right:10px; width:14px; height:14px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:9px; transform:rotate(90deg); transition:.2s linear;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection {height:40px; overflow-y:auto; padding-left:15px; color:#444; font-size:15px; outline:none; padding-right:15px; cursor:pointer; border:none; background:none; border-radius:0px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection input { margin-left:0px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection input::placeholder {color:#313237; font-size:15px; font-weight:500;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-selection__clear {margin-right:20px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-selection__choice {margin-top:3px; font-size:15px; line-height:20px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-selection__rendered {padding:0px;  margin-top: 3px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .select2-selection .select2-search {}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .cidade {display:table; float:left; margin-right: 20px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros #carrega-bairro {display:table; float:left; margin-right: 20px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .imovel-busca {display:table; float:left; margin-right: 20px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .ordenar-por {display:table; float:left; margin-right: 20px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .label {font-size:13px; display:block; line-height:13px; margin-bottom:5px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .botao-buscar {float: right; margin-top: 40px; margin-left: 8px;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .botao-buscar input {cursor: pointer; padding: 6px 20px 6px 40px; font-size: 15px; font-weight: 400 ; color: #FFF; border: none; background: #cda373 url(../i/quebrado/buscar.svg) 11px center no-repeat; background-size: 22px; border-radius: 8px; transition: all .2s;}
+#conteudo-interno #filtro-interno #conteudo-filtro #filtro #bloco-filtro #outros-filtros .botao-buscar input:hover {background:#eec79b url('../i/quebrado/buscar.svg') 11px center no-repeat; background-size:22px; transition: all .2s;}
+#conteudo-interno #conteudo-imoveis {display:table; margin:0 auto; margin-bottom:15px; }
+#conteudo-interno #conteudo-imoveis #mostra-imoveis {width:1200px;margin-top: 60px; display: flex; flex-wrap: wrap;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel {width: 285px; margin-bottom:20px; margin-right: 20px; }
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a {width: 265px; display: block; position: relative; background-color: #ffffff;  box-shadow: 0px 0px 20px -8px #000000; padding: 10px; border-radius: 10px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a .bloco-imagem {width:100%; height:199px; position:relative; background-color:#FFF; overflow:hidden; transition: all .3s; }
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a .bloco-imagem .imagem {width:100%; height:199px; position:relative; overflow:hidden; transition: all .3s;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a:hover .bloco-imagem .imagem {width:100%; height:199px; position:relative; overflow:hidden;  transform:scale(1.1); transition: all .3s;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados {}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #nome-imovel {margin-top: 10px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #nome-imovel .nome { height: 39px; font-size: 18px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 100%; font-weight: 700;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #local {margin-top: 5px; line-height: 120%;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #local .bairro{ font-size:16px; font-weight: 400; color: #666;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #local #cidade {display: flex; justify-content: space-between;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #local #cidade .cidade{ font-size:14px;font-weight: 300; color: #666;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #local #cidade .tipoC {display: flex ;align-items: center; padding: 2px 0px 2px 24px; color: #666;  background: transparent url(../i/quebrado/venda.svg) 1px center no-repeat; background-size: 20px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones { width: 100%; display: flex; background: #00303e; padding: 2px  10px 2px  10px; position: relative; left: -10px; margin-top: 8px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco {display: flex; justify-content: space-between;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .tipo{ font-size: 12px; padding: 3px 5px 3px 25px; color: white; }
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .quartos { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff; background:transparent url('../i/quebrado/quarto.svg') left center no-repeat; background-size:20px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .banheiros {font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/banheiro.svg') left center no-repeat; background-size:15px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .garagem { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/garagem.svg') left center no-repeat; background-size:18px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .area { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/metragem.svg') left center no-repeat; background-size:18px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .suite { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/suite.svg') left center no-repeat; background-size:18px;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #alinha-infos { display: flex; justify-content: space-between; margin-top: 15px; margin-bottom: 5px;  }
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #alinha-infos .preco { font-size: 22px; text-align: center; align-items: center; text-transform: uppercase; color: #00303e; line-height: 20px; display: flex; justify-content: end; font-weight: 600;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a #conteudo-dados #alinha-infos .detalhes { font-size: 12px; text-align: center; font-weight: 400; border-radius: 0px; color: #ffffff; padding: 2px 5px; background-color: #cda373; transition: all .3s;}
+#conteudo-interno #conteudo-imoveis #mostra-imoveis #bloco-imovel a:hover #conteudo-dados #alinha-infos .detalhes { transition: all .3s;justify-content: end; background-color: #eec79b;}
+
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno {  margin:0 auto; margin-bottom:15px; display: flex; justify-content: center;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel {width:100%; width: 1200px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #bloco-imagem {width: 100%;; position:relative;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #bloco-imagem .owl-prev {width:50px; height:50px; position:absolute; left:-80px; top:50%; margin-top:-25px; color:#FFF; outline:none; font-size:0.001px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 50px; border-radius:0; transform: rotate(180deg);  transition: all .3s;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel .btn-download {display: inline-block; padding: 5px 10px;  background: rgba(0, 0, 0, 0.6); color: #fff;  font-size: 12px;  text-decoration: none; border-radius: 5px;  position: absolute; bottom: 10px;  right: 10px;  opacity: 0; transition: opacity 0.3s ease; }
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #bloco-imagem li:hover .btn-download { opacity: 1; transition: all .3s; }
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #bloco-imagem li .btn-download:hover { background: rgba(59, 59, 59, 0.6); transition: all .3s; }
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #bloco-imagem .owl-prev span {color:#FFF; font-size:0.001px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #bloco-imagem .owl-next {width:50px; height:50px; position:absolute; right:-80px; top:50%; margin-top:-25px; color:#FFF; outline:none; font-size:0.001px; background:transparent url('../i/quebrado/seta.svg') center center no-repeat; background-size:auto 50px; border-radius:0; transition: all .3s;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #bloco-imagem .owl-next span {color:#FFF; font-size:0.001px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza  {display: grid; justify-content: center;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes {width:1200px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #bloco-nome {width:100%; margin-bottom:30px; margin-top:30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #bloco-nome #limita-nome {width:100%; overflow:hidden;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #bloco-nome #limita-nome .nome-imovel {font-weight:600; text-align:center; font-size:24px; color:#000000;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones {display:table; margin:0 auto; margin-bottom:15px; background-color: #012d3a; padding: 10px 15px; border-radius: 50px 0px 50px 0px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones span {font-weight:600; color:#ffffff;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .quartos {min-width:70px; float:left; margin-left:10px; margin-right: 10px; padding-top:40px ;   text-align:center;color:#ffffff; font-size:12px; font-weight:500; background:transparent url('../i/quebrado/quarto.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .suite {min-width:70px; float:left; margin-left:10px; margin-right: 10px; padding-top:40px; text-align:center;color:#ffffff; font-size:12px; font-weight:500; background:transparent url('../i/quebrado/suite.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .banheiros {min-width:70px; float:left; margin-left:10px; margin-right: 10px; padding-top:40px; text-align:center;color:#ffffff; font-size:12px; font-weight:500; background:transparent url('../i/quebrado/banheiro.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .garagem {min-width:70px; float:left; margin-left:10px; margin-right: 10px; padding-top:40px; text-align:center;color:#ffffff; font-size:12px; font-weight:500; background:transparent url('../i/quebrado/garagem.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .area-c {min-width:70px; float:left; margin-left:10px; margin-right: 10px; text-align:center;color:#ffffff; font-weight:500; font-size:12px; padding-top:40px; background:transparent url('../i/quebrado/tamanho.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .area {min-width:70px; float:left; margin-left:10px; margin-right: 10px; text-align:center;color:#ffffff;font-weight:500; font-size:12px; padding-top:40px; background:transparent url('../i/quebrado/total.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .fundos {min-width:70px; float:left; margin-left:10px; margin-right: 10px; text-align:center;color:#ffffff; font-weight:500; font-size:12px; padding-top:40px; background:transparent url('../i/quebrado/fundo.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .largura {min-width:70px; float:left; margin-left:10px; margin-right: 10px; text-align:center; color:#ffffff;font-weight:500; font-size:12px; padding-top:40px; background:transparent url('../i/quebrado/largura.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .frente {min-width:70px; float:left; margin-left:10px; margin-right: 10px; text-align:center;color:#ffffff; font-weight:500; font-size:12px; padding-top:40px; background:transparent url('../i/quebrado/frente.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #icones .posicao {min-width:70px; float:left; margin-left:10px; margin-right: 10px; text-align:center;color:#ffffff; font-weight:500; font-size:12px; padding-top:40px; background:transparent url('../i/quebrado/posicao.svg') center top no-repeat; background-size:auto 30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis {width:580px; float:left; margin-top:30px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #bloco-dados {width:580px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #bloco-dados #alinha {}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #bloco-dados #alinha #alinha-denovo {}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #bloco-dados #alinha #alinha-denovo .outros-imovel {width:48%; float:left; border-bottom:1px solid #ccc; font-size:16px; padding-bottom:3px; margin-bottom:20px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #bloco-dados #alinha #alinha-denovo .outros-imovel .bold {font-size:16px; color:#012d3a; font-weight:600;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #bloco-dados .preco-imovel {margin-top:20px; text-align:center; font-weight:600; font-size:26px; color:#ffffff; padding:5px 0px; background:#012d3a;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #caracteristicas { margin-top: 20px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #caracteristicas .titulo { text-align: center}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #caracteristicas .titulo strong { font-size: 16px; color: #012d3a;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario {width:579px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario #area-erro {padding:5px 10px; text-align:center; color:#FFF; background-color:#FF0000; border-radius:10px; margin-top:15px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario #area-erro .erro {color:#FFF;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario #area-erro .erro strong {color:#FFF;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .titulo-orcamento {font-size:20px; text-align:center; padding-top:25px; padding-bottom:5px; font-weight:600; color:#000000;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .texto-orcamento {font-size:14px; text-align:center; padding-bottom:15px; color:#313237;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario {width:100%;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario .campo {width:48%; float:left; margin-bottom:15px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario .input {width:94%; padding:6px 3%; color:#012d3a; border:1px solid #ccc; border-radius:5px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario select {width:100%; padding:6px 2%; color:#012d3a; border:1px solid #ccc; border-radius:5px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario textarea {width:567px; padding:6px 2%; height:50px; color:#012d3a; border:1px solid #ccc; border-radius:5px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario .botao-enviar {display:table; margin:0 auto;}  
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario .botao-enviar .input-botao {width:110px; float:right; border:none; cursor:pointer; padding:4px 0px; border:none; font-size:13px; font-weight:500; color:#ffffff; background-color:#012d3a; transition:.2s linear;} 
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #formulario .formulario .botao-enviar .input-botao:hover {background-color:#006d8f; color:#FFF; transition:.2s linear;}  
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #compartilhar {float:left; margin-top:30px;}  
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #mostra-informacoes #col-esq-imoveis #compartilhar .titulo {color:#373435; text-decoration:underline; padding-bottom:5px; font-size:16px;}  
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc {width:550px; padding:15px; margin-top:30px; min-height:325px; border:1px solid #ccc; border-radius:5px; float:right;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .titulo {font-size:18px; padding-bottom:5px; text-align:center; font-weight:600; color:#012d3a;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .descricao {margin-top:10px; line-height:185%; text-align:justify;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .descricao p {font-size:14px; color:#313237;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .descricao span {font-size:14px; color:#313237;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .descricao div {font-size:14px; color:#313237;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .descricao class {font-size:14px; color:#313237;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .descricao strong {font-size:16px; color:#313237;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc .titulo-corretor {padding:5px 20px; margin-top:20px; font-size:15px; text-align:center; font-weight:500; color:#ffffff; background-color:#012d3a;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor {padding:10px; background-color:#f5f5f5;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #esq-corretor {width:70%; float:left;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #esq-corretor .imagem {float:left; margin-right:10px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #esq-corretor .nome {font-size:16px; padding-bottom:8px; color:#000000; font-weight:600;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #esq-corretor .telefone {font-size:14px; padding-bottom:3px; color:#000000;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #esq-corretor .email a {display:block; font-size:12px; color:#000000;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #dir-corretor {float:right;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #dir-corretor .botao-whatsapp-2 {display:table; float:right;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #dir-corretor .botao-whatsapp-2 a {display:block; padding:10px; cursor:pointer; padding-top:30px; font-size:12px; text-align:center; color:#FFF; background:#05a308 url('../i/quebrado/whats-verde.svg') center 5px no-repeat; background-size:22px; box-shadow:0px 0px 10px -3px black; border-radius:5px; transition:.2s linear;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #bloco-desc #corretor #dir-corretor .botao-whatsapp-2 a:hover {background:#06bf09 url('../i/quebrado/whats-verde.svg') center 5px no-repeat; background-size:22px; transition:.2s linear;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza .link-video {width:825px; height:400px; margin:0 auto; margin-top:40px;}  
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado {width:1200px; margin:0 auto; margin-top: 25px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado .veja {display:table; font-size:16px; margin:0 auto; margin-bottom:35px; text-align:center; padding:5px 40px; color:#ffffff; background-color:#012d3a;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado .veja strong {font-size:16px; color:#ffffff; font-weight:600;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel {width: 285px; float:left; margin-bottom:20px; margin-right: 20px; }
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a {width: 265px; display: block; position: relative; background-color: #ffffff;  box-shadow: 0px 0px 20px -8px #000000; padding: 10px; border-radius: 10px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a .bloco-imagem {width:100%; height:199px; position:relative; background-color:#FFF; overflow:hidden; transition: all .3s; }
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a .bloco-imagem .imagem {width:100%; height:199px; position:relative; overflow:hidden; transition: all .3s;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a:hover .bloco-imagem .imagem {width:100%; height:199px; position:relative; overflow:hidden;  transform:scale(1.1); transition: all .3s;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados {}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #nome-imovel {margin-top: 10px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #nome-imovel .nome { height: 39px; font-size: 18px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; line-height: 100%; font-weight: 700;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #local {margin-top: 5px; line-height: 120%;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #local .bairro{ font-size:16px; font-weight: 400; color: #666;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #local #cidade {display: flex; justify-content: space-between;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #local #cidade .cidade{ font-size:14px;font-weight: 300; color: #666;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #local #cidade .tipoC {display: flex ;align-items: center; padding: 2px 0px 2px 24px; color: #666;  background: transparent url(../i/quebrado/venda.svg) 1px center no-repeat; background-size: 20px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones { width: 100%; display: flex; background: #00303e; padding: 2px  10px 2px  10px; position: relative; left: -10px; margin-top: 8px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones #espaco {display: flex; justify-content: space-between;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .tipo{ font-size: 12px; padding: 3px 5px 3px 25px; color: white; }
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .quartos { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff; background:transparent url('../i/quebrado/quarto.svg') left center no-repeat; background-size:20px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .banheiros {font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/banheiro.svg') left center no-repeat; background-size:15px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .garagem { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/garagem.svg') left center no-repeat; background-size:18px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .area { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/metragem.svg') left center no-repeat; background-size:18px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados  #alinha-icones #espaco .suite { font-size: 12px; text-align:center; display: flex; align-items: center; padding-left:25px; margin-right:5px; font-weight:400; color:#ffffff;  background:transparent url('../i/quebrado/suite.svg') left center no-repeat; background-size:18px;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #alinha-infos { display: flex; justify-content: space-between; margin-top: 15px; margin-bottom: 5px;  }
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #alinha-infos .preco { font-size: 22px; text-align: center; align-items: center; text-transform: uppercase; color: #00303e; line-height: 20px; display: flex; justify-content: end; font-weight: 600;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a #conteudo-dados #alinha-infos .detalhes { font-size: 12px; text-align: center; font-weight: 400; border-radius: 0px; color: #ffffff; padding: 2px 5px; background-color: #cda373; transition: all .3s;}
+#conteudo-interno #repete-imoveis-detalhes #conteudo-imoveis-interno #detalhes-imovel #centraliza #recomendado #bloco-imovel a:hover #conteudo-dados #alinha-infos .detalhes { transition: all .3s;justify-content: end; background-color: #eec79b;}
+#conteudo-interno #conteudo-blog {width: 100%; margin-top:30px; display: flex; justify-content: center;}
+#conteudo-interno #conteudo-blog #mostra-blog {width:1200px; margin-top:40px;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog {width:373px; float:left; margin-right:27px; margin-bottom: 20px; position:relative; background-color:#FFF; border-radius: 50px 50px 0px 0px; transition: all .2s; }
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog .imagem {width:373px; height:230px; border-radius: 50px 50px 0px 0px;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog #fundo {background-color: #012c3c ; padding-top: 1px;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-nome {  height:60px; overflow:hidden;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-nome .nome {text-align:center; font-size:20px; line-height:23px; font-weight:500; color:#ffffff; padding:  10px 10px 0px 10px; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-descricao {display: flex; height: 50px; padding: 5px 10px 10px 10px; overflow: hidden;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog #fundo .bloco-descricao .descricao{ font-size:12px; color:#ffffff; text-align:center; line-height:140%; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog #fundo #fundo-confira { padding-left: 10px; padding-right: 10px;  padding-bottom: 20px; padding-top: 10px; display: flex; justify-content: center;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog #fundo #fundo-confira .confira { padding:  3px 10px 3px 25px;  color: #ffffff; font-size: 14px; font-weight: 100; background: #cda373 url('../i/quebrado/ler-mais.svg') 5px center no-repeat; background-size: 15px;  transition: all .3s;}
+#conteudo-interno #conteudo-blog #mostra-blog #bloco-blog:hover #fundo #fundo-confira .confira { background-color: #eec79b ; transition: all .3s;}
+#conteudo-interno #conteudo-blog-detalhes {width: 100%; display: grid; justify-content: center; margin-top:25px;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes {width:1200px; margin: 0 auto;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes .imagem-blog {width:500px; float:left; margin-right:20px; margin-bottom:20px; overflow:hidden; border-radius:10px;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes .nome-blog {font-size:24px; margin-bottom:15px; font-weight:600; color:#012d3a;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes .fonte-blog {color:#585858; text-decoration:none; font-size:16px; padding-top:15px; text-align:left; text-decoration:underline;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog {line-height:170%;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog p {font-size:14px; color:#313237; margin: 1em 0;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog br {display:block; margin-bottom: 1em;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog ul {margin: 1em 0; padding-left: 1.5em;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog ol {margin: 1em 0; padding-left: 1.5em;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog span {font-size:14px; color:#313237;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog div {font-size:14px; color:#313237;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog strong {font-size:16px; color:#313237;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog li {font-size:14px; color:#313237; margin-left:15px; list-style:disc;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog h1 {font-size:25px; color:#313237; margin: 1em 0;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog h2 {font-size:23px; color:#313237; margin: 1em 0;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog h3 {font-size:21px; color:#313237; margin: 1em 0;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog h4 {font-size:19px; color:#313237; margin: 1em 0;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog h5 {font-size:17px; color:#313237; margin: 1em 0;}
+#conteudo-interno #conteudo-blog-detalhes #mostra-detalhes #dados-detalhes .descricao-blog h6 {font-size:16px; color:#313237; margin: 1em 0;}
+#conteudo-interno #conteudo-blog-detalhes #outras {width:1200px; }
+#conteudo-interno #conteudo-blog-detalhes #outras .imagem-outras {width:285px; margin-bottom:20px; margin-right:20px; float:left; overflow:hidden; border-radius:10px;}
+#conteudo-interno #conteudo-blog-detalhes #outras .imagem-outras a {width:285px; height:220px; overflow:hidden;}
+#conteudo-interno #conteudo-blog-detalhes #curtir {display:table; margin:0 auto; }
+#conteudo-interno #conteudo-balnearioGaivota {width:100%; margin-top:30px;}
+#conteudo-interno #conteudo-balnearioGaivota .imagem-balnearioGaivota {float:left; margin-right:20px; margin-bottom:15px;}
+#conteudo-interno #conteudo-balnearioGaivota .descricao {width:1200px; margin:0 auto; line-height:170%; text-align: center;}
+#conteudo-interno #conteudo-balnearioGaivota .descricao p {font-size:15px; color:#313237;}
+#conteudo-interno #conteudo-balnearioGaivota .descricao span {font-size:15px; color:#313237;}
+#conteudo-interno #conteudo-balnearioGaivota .descricao div {font-size:15px; color:#313237;}
+#conteudo-interno #conteudo-balnearioGaivota .descricao strong {font-size:15px; color:#313237;}
+#conteudo-interno #conteudo-balnearioGaivota #mais-imagens {width:100%; margin-top:35px;}
+#conteudo-interno #conteudo-balnearioGaivota #mais-imagens .imagem {width:24.62%; float:left; margin-right:0.5%; margin-bottom:0.5%; transition:.2s linear;}
+#conteudo-interno #conteudo-balnearioGaivota #mais-imagens .imagem:hover {transform:scale(1.1); transition:.2s linear;}
+
+#conteudo-interno #conteudo-contato {width:1200px; margin: 0 auto; }
+#conteudo-interno #conteudo-contato .obrigatorio {color:#FF0000; font-size:15px; } 
+#conteudo-interno #conteudo-contato #area-erro {width:500px; margin:0 auto; padding:5px 10px; background-color:#FF0000; border-radius:5px;} 
+#conteudo-interno #conteudo-contato #area-erro .erro {font-size:14px; text-align:center; color:#FFF; padding-top:5px; padding-bottom:5px;} 
+#conteudo-interno #conteudo-contato #area-erro .erro strong {font-size:14px; text-align:center; color:#FFF; padding-top:5px; padding-bottom:5px;} 
+#conteudo-interno #conteudo-contato #col-esq-fale {width:550px; float:left; margin-bottom: 30px;} 
+#conteudo-interno #conteudo-contato #col-esq-fale .campos-padrao-float {float:left; margin-right:20px; margin-bottom:15px;} 
+#conteudo-interno #conteudo-contato #col-esq-fale .campos-padrao-float .input {background-color:#FFF; border:1px solid #CCC; font-size:14px; color:#444; padding:8px 10px; border-radius:5px;}  
+#conteudo-interno #conteudo-contato #col-esq-fale .campos-padrao-float .select {width:244px; height:35px; position:relative; cursor:pointer; z-index:2; background:transparent; border:1px solid #CCC; font-size:14px; color:#444; padding:6px 10px; border-radius:5px;}  
+#conteudo-interno #conteudo-contato #col-esq-fale .campos-select {position:relative;} 
+#conteudo-interno #conteudo-contato #col-esq-fale .campos-select:before {content:""; display:inline-block; cursor:pointer; z-index:30; vertical-align:middle; position:absolute; margin-top:38px; right:10px; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:6px solid #373435; transition:.2s linear;}
+#conteudo-interno #conteudo-contato #col-esq-fale .campos-padrao {float:left; margin-bottom:15px;} 
+#conteudo-interno #conteudo-contato .label {font-size:15px; color:#000000; font-weight:600;}
+#conteudo-interno #conteudo-contato #col-esq-fale .campos-padrao .input {background-color:#FFF; border:1px solid #CCC; font-size:14px; color:#444; padding:8px 10px; border-radius:5px;}     
+#conteudo-interno #conteudo-contato #col-esq-fale .desabilita {width:520px; height:120px; background-color:#FFF; border:1px solid #CCC; font-size:14px; color:#444; padding:8px 10px; border-radius:5px;}  
+#conteudo-interno #conteudo-contato #col-dir-fale {width:620px; float:right;}  
+#conteudo-interno #conteudo-contato #col-dir-fale .celular {display:table; float:left; margin-right:25px;}
+#conteudo-interno #conteudo-contato #col-dir-fale .celular a {display:block; color:#5a5a5a; font-weight:500; cursor:pointer; font-size:14px; padding-left:35px; padding-top:4px; padding-bottom:4px; background:transparent url('../i/quebrado/whats.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-contato #col-dir-fale .celular2 {display:table; float:left;}
+#conteudo-interno #conteudo-contato #col-dir-fale .celular2 a {display:block; color:#5a5a5a; font-weight:500; cursor:pointer; font-size:14px; padding-left:35px; padding-top:4px; padding-bottom:4px; background:transparent url('../i/quebrado/whats.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-contato #col-dir-fale .endereco {display:table; margin-top:10px;}
+#conteudo-interno #conteudo-contato #col-dir-fale .endereco a {display:table; color:#5a5a5a; font-weight:500; font-size:14px; padding-left:35px; padding-top:5px; padding-bottom:5px; background:transparent url('../i/quebrado/local.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-contato #col-dir-fale .atendimento {display:table; margin-top:10px; color:#5a5a5a; font-weight:500; font-size:14px; padding-left:35px; padding-top:5px; padding-bottom:5px; background:transparent url('../i/quebrado/relogio.svg') left center no-repeat; background-size:25px;}
+#conteudo-interno #conteudo-contato #col-dir-fale #mapa {width:100%; margin-top:15px; border: 0px;}
+#conteudo-interno #conteudo-contato .enviar {display:table; float:right; cursor:pointer; margin-right:10px; padding:5px 30px; color:#000000; font-size:14px; font-weight:500; background:#f0d584; border:none; border-radius:10px; transition: all .3s;} 
+#conteudo-interno #conteudo-contato .enviar:hover {background-color:#af8e2b; transition: all .3s;} 
+
+#conteudo-interno #conteudo-contato-envio #conteudo-enviado .icone-enviado {display:table; margin: 84px auto;}
+#conteudo-interno #conteudo-contato-envio #conteudo-enviado .titulo {font-size:26px; font-weight:600; margin-top:20px; color:#484645; text-align:center;}
+#conteudo-interno #conteudo-contato-envio #conteudo-enviado .texto {font-size:18px; padding-top:15px; font-weight:400; color:#484645; text-align:center;}
+#conteudo-interno #conteudo-contato-envio #conteudo-enviado .texto strong {font-size:18px; font-weight:600; color:#000000;}
+
+
+
+#tudo #rodape {width:100%;}
+#tudo #rodape #politica-privacidade {padding:15px 20px; position:fixed; left:50%; line-height:15px; left:60px; bottom:60px; z-index:10000; background:#f5f5f5; border:2px solid #012d3a; border-radius:15px; transition: all .2s;}
+#tudo #rodape #politica-privacidade .texto {font-size:13px; color:#000000; font-weight:300; text-align:center;}
+#tudo #rodape #politica-privacidade .texto a {font-size:13px; color:#012d3a; font-weight:600; text-align:center;}
+#tudo #rodape #politica-privacidade .texto .botao-ok {color:#FFF; padding:5px 15px; font-size:12px; font-weight:600; cursor:pointer; border-radius:20px; background-color:#012d3a; transition: all .2s;}
+#tudo #rodape #politica-privacidade .texto .botao-ok:hover {background-color:#005169; transition: all .2s;}
+
+.botao-whatsapp {position:fixed; top:50%; margin-top:-24px; cursor:pointer; right:-110px; z-index:500; transition: all .2s;}
+.botao-whatsapp:hover {right:0; transition: all .2s;}
+.botao-whatsapp .one {width:110px; height:40px; margin:0 auto; display:block; padding-top:8px; color:#FFF; padding-left:50px; line-height:16px; font-size:12px; background:rgba(5,163,8,0.8) url('../i/quebrado/whats-verde.svg') 7px center no-repeat; background-size:36px; border-radius:30px 0px 0px 30px; transition: all .3s ease-in-out 0s;}
+.botao-whatsapp .one:before {content:"1"; width:15px; height:15px; left:30px; top:0px; text-align:center; position:absolute; background-color:#FF0000; border-radius:100%;}
+.botao-whatsapp .one:after {content:""; width:30px; height:30px; border-radius:100%; border:15px solid #f5f5f5; position:absolute; z-index:-1; top:50%; left:28px; transform:translate(-50%, -50%); animation:ring 1.5s infinite;} 
+.botao-whatsapp:hover .one {background:#2bb52d url('../i/quebrado/whats-verde.svg') 7px center no-repeat; background-size:36px; transition: all .3s;}
+
+@keyframes ring {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+#conteudo-interno #repete-politica {width: 100%;}
+#conteudo-interno #repete-politica #bloco-titulo {display: flex; justify-content: center; margin-bottom:40px; margin-top: 50px;}
+#conteudo-interno #repete-politica #bloco-titulo .titulo-interno {font-size: 28px; display: flex; align-items: center; color: #000000;  font-weight: 600;}
+#conteudo-interno #repete-politica #bloco-titulo .imagem-titulo { width: 40px; position: relative; left: -150px;}
+#conteudo-interno #repete-politica #conteudo-politica {width: 1200px; margin-top:10px; margin: 0 auto;}
+#conteudo-interno #repete-politica #conteudo-politica h2 {font-weight:bold; font-size:20px; color:#012d3a; padding-top:20px; font-weight:600; padding-bottom:20px;}
+#conteudo-interno #repete-politica #conteudo-politica h3 {font-weight:bold; font-size:16px; color:#012d3a; padding-top:20px; font-weight:600; padding-bottom:15px;}
+#conteudo-interno #repete-politica #conteudo-politica p {font-size:14px; color:#313237; line-height:150%; text-align:justify; padding-top:10px; padding-bottom:10px;}
+#conteudo-interno #repete-politica #conteudo-politica a {font-size:14px; color:#313237; text-decoration:underline;}
+#conteudo-interno #repete-politica #conteudo-politica li {font-size:14px; color:#313237; line-height:150%; text-align:justify; margin-left:30px; list-style:disc;}
+#conteudo-interno #repete-politica #conteudo-politica strong {font-size:14px; color:#012d3a; font-weight:600;}
+
+#conteudo-interno #conteudo-404 {width:100%; margin-top:20px; min-height: 416px;}
+#conteudo-interno #conteudo-404 .titulo {color:#282828; text-align:center; font-weight:600; font-size:150px;}
+#conteudo-interno #conteudo-404 .descricao {color:#000000; text-align:center; padding-bottom:10px; font-size:16px;}
+
+
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track-piece {
+    background-color: #FFF;
+}
+
+/* Cor do indicador de rolagem */
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #012d3a
+}
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: #1e505f
+}
+
+#paginacao {display:block; text-align:center; margin-top:10px;}
+#paginacao p{font-size:12px; margin-top: 50px ;}
+#paginacao strong{font-size:12px; color:#373435;}
+#paginacao ul {height:30px; margin:10px auto 0; text-align:center;}
+#paginacao ul li {display:inline;}
+#paginacao ul li a {margin-right:5px; font-size:13px; background-color:#012d3a; padding:2px 15px; border-radius:5px; transition:0.2s linear;}
+#paginacao ul li a:hover {background-color:#012d3a; transition:0.2s linear;}
+#paginacao a:link {color:#ffffff;}
+#paginacao a:visited {color:#ffffff;}
+#paginacao a:hover {color:#ffffff;}
+#paginacao a:active {color:#ffffff;}
+#paginacao span.branco  {margin-right:5px; font-size:13px; background-color:#fff; border:1px solid #f0d584; padding:2px 15px; border-radius:5px;}
+
+/* Botoes de voltar Áreas Internas */
+#conteudo-interno .botao-topo a:before {content:""; display: inline-block; cursor: pointer; vertical-align: middle; position: absolute; margin-top: 3px; margin-left: -20px; width: 0; height: 0;border-bottom: 7px solid transparent; border-top: 7px solid transparent; border-right: 10px solid #00243c; transition: .2s linear;}
+#conteudo-interno .botao-bottom a:before {content:""; display: inline-block; cursor: pointer; vertical-align: middle; position: absolute; margin-top: 3px; margin-left: -20px; width: 0; height: 0;border-bottom: 7px solid transparent; border-top: 7px solid transparent; border-right: 10px solid #00243c; transition: .2s linear;}
