@@ -101,6 +101,12 @@
 	if($url[2] == "politica-de-privacidade"){
 		$title = "Política de Privacidade | ".$nomeEmpresa;
 	}else
+	if($url[2] == "sendEmail"){
+		$title = "Contato WhatsApp Enviado | ".$nomeEmpresa;
+	}else
+	if($url[2] == "depoimentos"){
+		$title = "Depoimentos | ".$nomeEmpresa;
+	}else
 	if($url[2] == "contato-whatsapp-enviado"){
 		$title = "Contato WhatsApp Enviado | ".$nomeEmpresa;
 		$description = "";

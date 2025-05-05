@@ -2,7 +2,7 @@ RewriteEngine On
 
 RewriteRule ^Sitemap\.xml$ geraSitemap.php [L]
 
-ErrorDocument 404 http://192.168.1.200/custodio-imoveis/404/
+ErrorDocument 404 http://192.168.1.200/turimar-imobiliaria/404/
 
 
 RewriteRule ger\/$ ger/index.php

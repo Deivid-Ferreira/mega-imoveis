@@ -1,9 +1,16 @@
 				<script type="text/javascript">
-					function leadWhatsApp(cod, area){
+					function leadWhatsApp(cod, area, nome, celular){
 						var $FL = jQuery.noConflict();
-						var nomeLead = document.getElementById("nomeContato"+cod).value;
-						var celularLead = document.getElementById("celularContato"+cod).value;
-						var siteLocal = area;
+						if (nome != '' && nome != null) {
+							var nomeLead = nome;
+							var celularLead = celular;
+							var siteLocal = area;
+						} else {
+							var nomeLead = document.getElementById("nomeContato" + cod).value;
+							var celularLead = document.getElementById("celularContato" + cod).value;
+							var siteLocal = area;
+						}
+						
 						$FL("#loading-fundo").fadeIn(250);
 						$FL("#loading-icone").fadeIn(250);								
 						grecaptcha.execute('<?php echo $chaveSite;?>', {action: 'action_form'}).then(function(token) {
@@ -62,25 +69,18 @@
 				</div> 
 			   <div id="repete-topo">
                     <div id="conteudo-topo">
-                        <div id="esq-topo">
-                            <div id="logo-topo">
-                                <p class="logo"><a title="<?php echo $nomeEmpresa; ?>" href="<?php echo $configUrl; ?>"><img id="logo-img" style="display:block;" src="<?php echo $configUrl; ?>f/i/quebrado/normal.png" width="100%" /></a></p>
-                            </div>
-                        </div>
-                        <div id="dir-topo">
-							<div id="redes">
-								<p class="whatsapp">WhatsApp</p>
-								<a class="facebook" target="_blank" title="Curta nossa página no Facebook" href="www.facebook.com"></a>
-								<a class="instagram" target="_blank" title="Siga-nos no Instagram" href="www.instagram.com"></a>
-							</div>
-							<div id="mostra-menu">
-                                <p class="<?php echo $url[2] == "a-imobiliaria" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>a-imobiliaria/">A Imobiliária</a></p>
-                                <p class="<?php echo $url[2] == "imoveis" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>imoveis/">Imóveis</a></p>
-                                <p class="<?php echo $url[2] == "balneario-gaivota" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>balneario-gaivota/">Balneário Gaivota</a></p>     
-                                <p class="<?php echo $url[2] == "depoimentos" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>depoimentos/">Depoimentos</a></p>
-                                <p class="<?php echo $url[2] == "novidades" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>novidades/">Novidades</a></p>
-                                <p class="<?php echo $url[2] == "contato" ? 'ativo' : ''; ?>" style="margin-right: 0px;" ><a onclick="abrirAcesso();" style="cursor:pointer;" >Contato</a></p>
-                            </div>
-                        </div>
+						<div id="esq-topo">
+							<p class="<?php echo $url[2] == "a-turimar" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>a-turimar/">A Turimar</a></p>
+							<p class="<?php echo $url[2] == "balneario-gaivota" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>balneario-gaivota/">Balneário Gaivota</a></p>
+							<p class="<?php echo $url[2] == "terrenos" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>terrenos/">Terrenos</a></p>
+						</div>
+						<div id="logo-topo">
+							<p class="logo"><a title="<?php echo $nomeEmpresa; ?>" href="<?php echo $configUrl; ?>"><img id="logo-img" style="display:block;" src="<?php echo $configUrl; ?>f/i/quebrado/normal.png" width="100%" /></a></p>
+						</div>
+						<div id="dir-topo">
+							<p class="<?php echo $url[2] == "porque-comprar" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>porque-comprar/">Porque Comprar</a></p>
+							<p class="<?php echo $url[2] == "novidades" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>novidades/">Novidades</a></p>
+							<p class="<?php echo $url[2] == "depoimententos" ? 'ativo' : ''; ?>"><a href="<?php echo $configUrl; ?>depoimententos/">Depoimentos</a></p>
+						</div>
                     </div>
                 </div>

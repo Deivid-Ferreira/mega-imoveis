@@ -32,7 +32,7 @@
 					include ('f/conf/criaUrl.php');
 					$urlBalnearioGaivota = criaUrl($_POST['nome']);
 																	
-					$sql = "UPDATE balnearioGaivota SET nomeBalnearioGaivota = '".preparaNome($_POST['nome'])."', descricaoBalnearioGaivota = '".$_POST['descricao']."', urlBalnearioGaivota = '".$urlBalnearioGaivota."' WHERE codBalnearioGaivota = '".$url[6]."'";
+				echo 	$sql = "UPDATE balnearioGaivota SET nomeBalnearioGaivota = '".preparaNome($_POST['nome'])."', descricaoBalnearioGaivota = '".$_POST['descricao']."', urlBalnearioGaivota = '".$urlBalnearioGaivota."' WHERE codBalnearioGaivota = '".$url[6]."'";
 					$result = $conn->query($sql); 
 					
 					if($result == 1){

@@ -2,7 +2,7 @@
 	$configServer = "localhost";
 	$configLogin = "root";
 	$configSenha = "epitafio";
-	$configBaseDados = "mega-imoveis";	
+	$configBaseDados = "turimar-imobiliaria";	
 	
 	$conn = new mysqli($configServer, $configLogin, $configSenha, $configBaseDados);
 
@@ -10,14 +10,14 @@
 		die("Erro de conexão: " . $conn->connect_error);
 	}
 
-	$configUrl = "http://192.168.1.200/mega-imoveis/ger/";
-	$configUrlGer = "http://192.168.1.200/mega-imoveis/ger/";
-	$configUrlSite = "http://192.168.1.200/mega-imoveis/";
+	$configUrl = "http://192.168.1.200/turimar-imobiliaria/ger/";
+	$configUrlGer = "http://192.168.1.200/turimar-imobiliaria/ger/";
+	$configUrlSite = "http://192.168.1.200/turimar-imobiliaria/";
 
-	$cookie = "megaImoveisGer";
+	$cookie = "turimarimobiliariaGer";
 	$configLimite = 10;
 	
-	$urlUpload = "/mega-imoveis/ger";
+	$urlUpload = "/turimar-imobiliaria/ger";
 
 	$nomeEmpresa = "Ger | Mega Imóveis  [GER]";
 	$nomeEmpresaMenor = "Mega Imóveis";

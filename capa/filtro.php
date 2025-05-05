@@ -242,6 +242,24 @@
 													</select>										
 												</p>
 											</div>
+											
+											<div id="alinha">
+												<p id="titulo-filtro">Tipo do Imóvel</p>
+												<p class="imovel-busca campo-select">
+													<select class="select" name="imovel-busca">
+														<option value="">Selecione...</option>		
+<?php
+		$sql = "SELECT DISTINCT T.* FROM tipoImovel T inner join imoveis I on T.codTipoImovel = I.codTipoImovel WHERE T.statusTipoImovel = 'T' and I.statusImovel = 'T' ORDER BY T.nomeTipoImovel ASC";
+		$result = $conn->query($sql);
+		while($dadosTipoImovel = $result->fetch_assoc()){	
+?>
+													<option value="<?php echo $dadosTipoImovel['codTipoImovel'];?>" <?php echo $_SESSION['imovel-busca'] == $dadosTipoImovel['codTipoImovel'] ? '/SELECTED/' : '';?>><?php echo $dadosTipoImovel['nomeTipoImovel'];?></option>				
+<?php
+		}
+?>										
+													</select>										
+												</p>
+											</div>
 											<div id="alinha">
 												<p id="titulo-filtro">Bairro</p>
 												<div id="carrega-bairro" style="float:left;">	
@@ -308,38 +326,21 @@
 ?>
 												</div>	
 											</div>	
-							<script>
-								var $rf = jQuery.noConflict();
-									$rf(".bairroSelect").select2({
-										placeholder: "Selecione...",
-										multiple: true,
-										tags: true, 
-										allowClear: false,
-										openOnEnter: true, 
-										multiple: true, 						
-									});			
-							</script>											
-											<div id="alinha">
-												<p id="titulo-filtro">Tipo do Imóvel</p>
-												<p class="imovel-busca campo-select">
-													<select class="select" name="imovel-busca" style="">
-														<option value="">Selecione...</option>		
-<?php
-		$sql = "SELECT DISTINCT T.* FROM tipoImovel T inner join imoveis I on T.codTipoImovel = I.codTipoImovel WHERE T.statusTipoImovel = 'T' and I.statusImovel = 'T' ORDER BY T.nomeTipoImovel ASC";
-		$result = $conn->query($sql);
-		while($dadosTipoImovel = $result->fetch_assoc()){	
-?>
-													<option value="<?php echo $dadosTipoImovel['codTipoImovel'];?>" <?php echo $_SESSION['imovel-busca'] == $dadosTipoImovel['codTipoImovel'] ? '/SELECTED/' : '';?>><?php echo $dadosTipoImovel['nomeTipoImovel'];?></option>				
-<?php
-		}
-?>										
-													</select>										
-												</p>
-											</div>
+											<script>
+												var $rf = jQuery.noConflict();
+													$rf(".bairroSelect").select2({
+														placeholder: "Selecione...",
+														multiple: true,
+														tags: true, 
+														allowClear: false,
+														openOnEnter: true, 
+														multiple: true, 						
+													});			
+											</script>
 											<div>
 												<p id="titulo-filtro">Código</p>
 												<p class="codigo campo-select">
-													<select class="selectCodigo form-control campo"  id="idSelectCodigo" name="codigo-busca" style="width:180px; display: none;">
+													<select class="selectCodigo form-control campo"  id="idSelectCodigo" name="codigo-busca" style="width:240px; display: none;">
 														<option value="T"  placeholder = "Selecione..." >Todos</option>
 <?php
 	$sql = "SELECT DISTINCT I.codigoImovel FROM imoveis I inner join imoveisImagens II on I.codImovel = II.codImovel WHERE I.statusImovel = 'T' ORDER BY I.codImovel ASC";
@@ -367,9 +368,8 @@
 											</script>
 											
 																																																																							
-											<p class="botao-buscar"><input type="submit" class="submit-buscar" value="Buscar" name="buscar"/></p>
-											<br class="clear"/>
-											</div>
+										</div>
+										<p class="botao-buscar"><input type="submit" class="submit-buscar" value="Buscar Imóvel" name="buscar"/></p>
 										</form>
 									</div>
 								</div>															

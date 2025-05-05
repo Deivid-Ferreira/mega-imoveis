@@ -43,21 +43,15 @@
 			$margin = " margin-right:40px;";
 		}			
 ?>
-									<div id="bloco-blog">
-										<a title="<?php echo $dadosBlog['nomeBlog']; ?>" href="<?php echo $configUrl . 'novidades/' . $dadosBlog['codBlog'] . '-' . $dadosBlog['urlBlog'] . '/'; ?>">
-											<p class="imagem" style="background:transparent url('<?php echo $configUrlGer . 'f/blog/' . $dadosImagem['codBlog'] . '-' . $dadosImagem['codBlogImagem'] . '-O.'.$dadosImagem['extBlogImagem']; ?>') center top no-repeat; background-size:cover, 100%;">
-												<div id="fundo">
-													<div class="bloco-nome">
-														<p class="nome"><?php echo $dadosBlog['nomeBlog']; ?></p>
-													</div>
-													<div class="bloco-descricao">
-														<p class="descricao"><?php echo strip_tags($dadosBlog['descricaoBlog']); ?></p>
-													</div>
-													<div id="fundo-confira">
-														<p class="confira">Ler mais<img src="<?php echo $configUrl . 'f/i/quebrado/seta-confira.svg'; ?>" width="15" alt=""></p>
-													</div>
+									<div id="bloco-blog">	
+										<a title="Ver mais - <?php echo  $dadosBlog['nomeBlog']; ?>" href="<?php echo $configUrl.'novidades/'.$dadosBlog['codBlog'].'-'.$dadosBlog['urlBlog'].'/';?>">
+											<div id="bloco-imagem" style=" background:transparent url('<?php echo $configUrlGer . 'f/blog/' . $dadosImagem['codBlog'] . '-' . $dadosImagem['codBlogImagem'] . '-O.'.$dadosImagem['extBlogImagem']; ?>') center top no-repeat; background-size:cover, 100%;">
+												<div id="sombra">
+													<p id="titulo"><?php echo $dadosBlog['nomeBlog']; ?></p>
+													<div id="descricao"><?php echo $dadosBlog['descricaoBlog']; ?></div>
+													<p id="ver">VER MAIS</p>
 												</div>
-											</p>
+											</div>
 										</a>
 									</div>
 <?php		

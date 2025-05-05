@@ -68,25 +68,7 @@
 
 					$descricao = str_replace("../../", $configUrlGer, $_POST['descricao']);
 					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					$descricao = str_replace("../../", $configUrlGer, $descricao);
-					
+					echo "aqui";
 					$sqlUltimoDepoimento = "SELECT codOrdenacaoDepoimento FROM depoimentos ORDER BY codOrdenacaoDepoimento DESC";
 					$resultUltimoDepoimento = $conn->query($sqlUltimoDepoimento);
 					$dadosUltimoDepoimento = $resultUltimoDepoimento->fetch_assoc();

@@ -20,7 +20,7 @@
 <?php
 	if($dadosImagemP['codQuemSomosImagem'] != ""){
 ?>
-							<p class="imagem-quemSomos wow animate__animated animate__fadeIn"><a title="<?php echo $nomeEmpresaMenor; ?>" rel="lightbox[roadtrip]" href="<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagemP['codQuemSomos'].'-'.$dadosImagemP['codQuemSomosImagem'].'-W.webp'?>"><img style="width:400px; display:block;"src="<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagemP['codQuemSomos'].'-'.$dadosImagemP['codQuemSomosImagem'].'-W.webp';?>" alt=""></a></p>
+							<p class="imagem-quemSomos wow animate__animated animate__fadeIn"><a title="<?php echo $nomeEmpresaMenor; ?>" rel="lightbox[roadtrip]" href="<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagemP['codQuemSomos'].'-'.$dadosImagemP['codQuemSomosImagem'].'-W.webp'?>"><img style="width:400px; border: 5px solid #041c40; border-radius: 22px; display:block;"src="<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagemP['codQuemSomos'].'-'.$dadosImagemP['codQuemSomosImagem'].'-W.webp';?>" alt=""></a></p>
 <?php
 	}
 ?>
@@ -49,7 +49,7 @@
 				$margin = "";
 			}			
 ?>								
-								<p class="imagem" style="<?php echo $margin;?>"><a rel="lightbox[roadtrip]" href="<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagems['codQuemSomos'].'-'.$dadosImagems['codQuemSomosImagem'].'-W.webp';?>" style="width:100%; height:250px; display:block; background:transparent url('<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagems['codQuemSomos'].'-'.$dadosImagems['codQuemSomosImagem'].'-W.webp';?>') center center no-repeat; background-size:cover, 100%;"></a></p>
+								<p class="imagem" style="<?php echo $margin;?>"><a rel="lightbox[roadtrip]" href="<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagems['codQuemSomos'].'-'.$dadosImagems['codQuemSomosImagem'].'-W.webp';?>" style="width:100%; height:270px; display:block; background:transparent url('<?php echo $configUrlGer.'f/quemSomos/'.$dadosImagems['codQuemSomos'].'-'.$dadosImagems['codQuemSomosImagem'].'-W.webp';?>') center center no-repeat; background-size:cover, 100%;"></a></p>
 <?php
 		}
 ?>

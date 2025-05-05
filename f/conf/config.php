@@ -1,12 +1,12 @@
 <?php
-	$configUrl = "http://192.168.1.200/mega-imoveis/";
-	$configUrlSeg = "http://192.168.1.200/mega-imoveis_m/";
-	$configUrlGer = "http://192.168.1.200/mega-imoveis/ger/";
+	$configUrl = "http://192.168.1.200/turimar-imobiliaria/";
+	$configUrlSeg = "http://192.168.1.200/turimar-imobiliaria_m/";
+	$configUrlGer = "http://192.168.1.200/turimar-imobiliaria/ger/";
 
 	$configServer = "localhost";
 	$configLogin = "root";
 	$configSenha = "epitafio";
-	$configBaseDados = "mega-imoveis";
+	$configBaseDados = "turimar-imobiliaria";
 
 	$conn = new mysqli($configServer, $configLogin, $configSenha, $configBaseDados);
 	$conn->set_charset("utf8mb4");
@@ -18,15 +18,15 @@
 	$sqlSession = "SET SESSION sql_mode = ''";
 	$resultSession = $conn->query($sqlSession);
 	
-	$nomeEmpresa = "Mega Imóveis - Imobiliária em Balneário Gaivota / SC";
-	$nomeEmpresaMenor = "Mega Imóveis";
+	$nomeEmpresa = "Turimar Imobiliária - Imobiliária em Balneário Gaivota / SC";
+	$nomeEmpresaMenor = "Turimar Imobiliária";
 	
-	$cookie = "megaImoveisSite";
+	$cookie = "TurimarImobiliáriaSite";
 	
 	$aux = "";
 	
-	$politicaNome = "Mega Imóveis";
-	$politicaNomeA = "a Mega Imóveis";
+	$politicaNome = "Turimar Imobiliária";
+	$politicaNomeA = "a Turimar Imobiliária";
 
 	$linguagem = "Portuguese";
 	$pais = "Brazil";
@@ -60,7 +60,7 @@
 	$chaveSite = "6Lcf_40qAAAAABj2Mh24GvTcutl8b_299JrKrsOU";
 	$chaveSecreta = "6Lcf_40qAAAAAIDMDoww_YgGHq88QWP0T9op_TVy";
 	
-	$cor1 = "#01CCD2";
-	$cor2 = "#01CCD2";
+	$cor1 = "#ca0000";
+	$cor2 = "#ca0000";
 ?>
 	

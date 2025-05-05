@@ -6,7 +6,7 @@
 									<div id="filtro-interno">
 
 <?php
-	include('capa/filtro.php');
+	include('capa/filtro-interno.php');
 	
 	if($cidadeFiltra != ""){
 		$urlNumber = 5;
@@ -74,37 +74,36 @@
 			$preco = "A consultar";
 		}
 
-		if($cont == 4){
+		if($cont == 3){
 			$cont = 0;
 			$margin = "margin-right:0px;";
 		}else{
 			$margin = "";
 		}				
 ?>
-									<div id="bloco-imovel" style="<?php echo $margin; ?> " class="wow animate__animated animate__fadeIn">
+									<div id="bloco-imovel" style="<?php echo $margin; ?> " class="wow animate__animated animate__fadeInUp">
 										<a title="<?php echo $dadosImoveis['nomeImovel']; ?>" href="<?php echo $configUrl . 'imoveis/' . $dadosImoveis['codImovel'] . '-' . $dadosImoveis['urlImovel'] . '/'; ?>">
 											<div class="bloco-imagem">
 												<p class="imagem" style="background:transparent url('<?php echo $configUrlGer . 'f/imoveis/' . $dadosImagem['codImovel'] . '-' . $dadosImagem['codImovelImagem'] . '-W.webp'; ?>') center center no-repeat; background-size:cover, 100%;"></p>
 											</div>
 											<div id="conteudo-dados">
 												<div id="nome-imovel">
-													<p class="nome">  <?php echo $dadosImoveis['nomeImovel']; ?> </p>
+													<p class="nome">													                  <?php echo $dadosImoveis['nomeImovel']; ?> </p>
 												</div>
 												<div id="local">
-													<p class="bairro"> <?php echo $dadosBairro['nomeBairro']; ?></p>
 													<div id="cidade">
-														<p class="cidade"> <?php echo $dadosCidade['nomeCidade']; ?> / <?php echo $dadosCidade['estadoCidade']; ?></p>
-														<p class="tipoC" ><?php if( $dadosImoveis['tipoCImovel']  == 'V'){ ?> Venda <?php }else{  ?> Aluguel <?php } ?> </p>
+														<p class="bairro">														                   <?php echo $dadosBairro['nomeBairro']; ?></p>
+														<p class="cidade">														                   <?php echo $dadosCidade['nomeCidade']; ?> /<?php echo $dadosCidade['estadoCidade']; ?></p>
 													</div>
 												</div>
-												<div id="alinha-icones"  style=" <?php echo $dadosTipoImovel['nomeTipoImovel'] == 'Terreno' ? 'width:fit-content;' : ''; ?>">
+												<div id="alinha-icones"  style="												                                 <?php echo $dadosTipoImovel['nomeTipoImovel'] == 'Terreno' ? 'width:fit-content;' : ''; ?>">
 													<div id="espaco">
-														<p class="tipo"  style=" <?php if( $dadosTipoImovel['nomeTipoImovel']  == 'Apartamento'){ ?> background: transparent url(<?php echo $configUrl; ?>f/i/quebrado/apartamento.svg) 0px center no-repeat;  <?php }else if($dadosTipoImovel['nomeTipoImovel']  == 'Terreno' || $dadosTipoImovel['nomeTipoImovel']  == 'Lote' ){  ?> background: transparent url(<?php echo $configUrl; ?>f/i/quebrado/terreno.svg) 0px center no-repeat; <?php }else {  ?> background: transparent url(<?php echo $configUrl; ?>f/i/quebrado/casa.svg) 0px center no-repeat; <?php } ?> background-size: 20px; " ><?php echo $dadosTipoImovel['nomeTipoImovel']; ?></p>
+														<p class="tipo"  style="														                         <?php if ($dadosTipoImovel['nomeTipoImovel'] == 'Apartamento') {?> background: transparent url(<?php echo $configUrl; ?>f/i/quebrado/apartamento.svg) 0px center no-repeat;<?php } else if ($dadosTipoImovel['nomeTipoImovel'] == 'Terreno' || $dadosTipoImovel['nomeTipoImovel'] == 'Lote') {?> background: transparent url(<?php echo $configUrl; ?>f/i/quebrado/terreno.svg) 0px center no-repeat;<?php } else {?> background: transparent url(<?php echo $configUrl; ?>f/i/quebrado/casa.svg) 0px center no-repeat;<?php }?> background-size: 20px; " ><?php echo $dadosTipoImovel['nomeTipoImovel']; ?></p>
 														<p class="area" style="<?php echo $dadosImoveis['metragemImovel']; ?>"><?php echo $dadosImoveis['metragemImovel']; ?><?php echo $dadosImoveis['siglaMetragem']; ?></p>
 														<p class="quartos" style="<?php echo $dadosImoveis['quartosImovel'] == 0 ? 'display:none;' : ''; ?>"><?php echo $dadosImoveis['quartosImovel']; ?></p>
 														<p class="banheiros" style="<?php echo $dadosImoveis['banheirosImovel'] == 0 ? 'display:none;' : ''; ?>"><?php echo $dadosImoveis['banheirosImovel']; ?></p>
 														<p class="garagem" style="<?php echo $dadosImoveis['garagemImovel'] == 0 ? 'display:none;' : ''; ?>"><?php echo $dadosImoveis['garagemImovel']; ?></p>
-														<p class="suite" style="<?php echo $dadosImoveis['suiteImovel'] == 0 ? 'display:none;' : ''; ?>"><?php echo $dadosImoveis['suiteImovel']; ?></p>
+														<div id="cod"><p>COD														                     <?php echo $dadosImoveis['codigoImovel']; ?></p></div>
 													</div>
 												</div>
 												<div id="icones">

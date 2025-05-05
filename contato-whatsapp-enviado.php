@@ -43,41 +43,12 @@
 	</div>	
 
 <style>
-	.loading-bloco {position:absolute; top:50%; left:50%; transform:translate(-50% -50%);}
-  .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #012d3a;
-    animation: bounce 1.2s infinite ease-in-out;
-  }
-
-  .dot:nth-child(1) {
-    animation-delay: -0.4s;
-  }
-
-  .dot:nth-child(2) {
-    animation-delay: -0.2s;
-  }
-
-  .dot:nth-child(3) {
-    animation-delay: 0s;
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
-</style>
+	.loading-bloco {position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);;}
+	.loader {display: flex;	justify-content: center;align-items: center;gap: 5px;}
+	.dot { width: 10px; height: 10px; border-radius: 50%; background-color: #041c40;  animation: bounce 1.2s infinite ease-in-out;}
+	.dot:nth-child(1) { animation-delay: -0.4s;}
+	.dot:nth-child(2) { animation-delay: -0.2s;}
+	.dot:nth-child(3) { animation-delay: 0s; }
+	@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+	</style>
 </div>

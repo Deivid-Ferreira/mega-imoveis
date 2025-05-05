@@ -58,6 +58,8 @@
 								<li><a <?php echo $url[4] == "banners" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/banners/">Banners Capa</a></li>
 								<li><a <?php echo $url[4] == "quemSomos" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/quemSomos/">Quem Somos</a></li>				
 								<li><a <?php echo $url[4] == "blog" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/blog/">Blog</a></li>					
+								<li><a <?php echo $url[4] == "porque" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/porque/">Porque Comprar</a></li>					
+								<li><a <?php echo $url[4] == "depoimentos" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/depoimentos/">Depoimentos</a></li>					
 								<li><a <?php echo $url[4] == "balnearioGaivota" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/balnearioGaivota/">Balneário Gaivota</a></li>
 							</ul>
 						</div>			
@@ -90,6 +92,8 @@
 								<li><a <?php echo $url[4] == "banners" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/banners/">Banners Capa</a></li>
 								<li><a <?php echo $url[4] == "quemSomos" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/quemSomos/">Quem somos</a></li>	
 								<li><a <?php echo $url[4] == "blog" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/blog/">Blog</a></li>
+								<li><a <?php echo $url[4] == "porque" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/porque/">Porque Comprar</a></li>					
+								<li><a <?php echo $url[4] == "depoimentos" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/depoimentos/">Depoimentos</a></li>					
 								<li><a <?php echo $url[4] == "balnearioGaivota" ? "class='ativo'" : "";?> href="<?php echo $configUrl;?>cadastros/balnearioGaivota/">Balneário Gaivota</a></li>
 							</ul>
 						</div>			

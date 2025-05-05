@@ -50,6 +50,7 @@
 					$_SESSION['atendimento'] = $dadosInformacao['atendimentoInformacao'];
 					$_SESSION['celular'] = $dadosInformacao['celularInformacao'];
 					$_SESSION['instagram'] = $dadosInformacao['instagramInformacao'];
+					$_SESSION['facebook'] = $dadosInformacao['facebookInformacao'];
 					$_SESSION['mapa'] = $dadosInformacao['mapaInformacao'];
 					$_SESSION['tagsHead'] = $dadosInformacao['tagsHeadInformacao'];
 					$_SESSION['tagsBody'] = $dadosInformacao['tagsBodyInformacao'];
@@ -79,6 +80,7 @@
 								document.getElementById("creci").disabled = false;
 								document.getElementById("celular").disabled = false;
 								document.getElementById("instagram").disabled = false;
+								document.getElementById("facebook").disabled = false;
 								document.getElementById("mapa").disabled = false;
 								document.getElementById("tagsHead").disabled = false;
 								document.getElementById("tagsBody").disabled = false;
@@ -98,18 +100,24 @@
 							<input id="rota" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="rota" style="width:497px;" value="<?php echo $_SESSION['rota']; ?>" /></p>
 							
 							<p class="bloco-campo-float"><label>E-mail: <span class="obrigatorio"> </span></label>
-							<input id="email" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="email" style="width:235px;" value="<?php echo $_SESSION['email']; ?>" /></p>
+							<input id="email" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="email" style="width:495px;" value="<?php echo $_SESSION['email']; ?>" /></p>
+
+							<br class="clear"/>
 
 							<p class="bloco-campo-float"><label>CRECI: <span class="obrigatorio"> </span></label>
 							<input id="creci" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="creci" style="width:235px;" value="<?php echo $_SESSION['creci']; ?>" /></p>
 
-							<br class="clear"/>
-							
 							<p class="bloco-campo-float"><label>Celular: <span class="obrigatorio"> </span></label>
 							<input id="celular" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="celular" style="width:235px;" value="<?php echo $_SESSION['celular']; ?>" onKeyDown="Mascara(this,novoTelefone);" onKeyPress="Mascara(this,novoTelefone);" onKeyUp="Mascara(this,novoTelefone);"/></p>
 
+							<br class="clear"/>
+
+							<p class="bloco-campo-float"><label>Link Facebook: <span class="obrigatorio"> </span></label>
+							<input id="facebook" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="facebook" style="width:235px;" value="<?php echo $_SESSION['facebook']; ?>" /></p>
+
 							<p class="bloco-campo-float"><label>Link Instagram: <span class="obrigatorio"> </span></label>
 							<input id="instagram" <?php echo $erroAtiva == "ok" ? "" : "disabled='disabled'";?> class="campo" type="text" name="instagram" style="width:235px;" value="<?php echo $_SESSION['instagram']; ?>" /></p>
+
 
 							<br class="clear"/>
 

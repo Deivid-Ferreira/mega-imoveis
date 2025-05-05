@@ -1,6 +1,24 @@
-  
-<div id="repete-banners">
+
+
 		<div id="conteudo-banner">
+			<div id="contato">
+				<form action="">
+					<div id="fundo">
+						<p class="titulo">Solicite um contato de nossos corretores!</p>
+						<div id="mostra-formulario">
+							<p class="nome">Nome</p>
+							<input type="text" name="nomeContatoR" id="nomeContatoR"  placeholder="Digite seu Nome:">
+							<p class="whatsapp">WhatsApp</p>
+							<input type="text" name="celularContatoR" id="celularContatoR" placeholder="Digite seu WhatsApp:" onKeyDown="Mascara(this,novoTelefone);" onKeyPress="Mascara(this,novoTelefone);" onKeyUp="Mascara(this,novoTelefone);">
+							<p class="menssagem">Menssagem</p>
+							<textarea name="menssagem" id="menssagem" placeholder="Digite sua mensagem" style="padding-left: 6px; width: 273px;"></textarea>
+							<div id="botao">
+								<button type="text" value="Enviar">ENVIAR</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
 			<div id="bloco-banner">
 				<div class="owl-carrossel">
 					<div class="row">
@@ -8,11 +26,11 @@
 							<div class="loop owl-carousel bannerCapa owl-loaded owl-drag">
 <?php
 								$cont = 0;
-								$sqlBanner = "SELECT * FROM banners WHERE statusBanner = 'T' ORDER BY codOrdenacaoBanner ASC";
+							 	$sqlBanner = "SELECT * FROM banners WHERE statusBanner = 'T' ORDER BY codOrdenacaoBanner ASC";
 								$resultBanner = $conn->query($sqlBanner);
-								while ($dadosBanner = $resultBanner->fetch_assoc()) {
-									$sqlImagem = "SELECT * FROM bannersImagens WHERE codBanner = '" . $dadosBanner['codBanner'] . "' ORDER BY codBannerImagem ASC LIMIT 0,1";
-									$resultImagem = $conn->query($sqlImagem);
+								while ($dadosBanner =  $resultBanner->fetch_assoc()) {
+								 	$sqlImagem = "SELECT * FROM bannersImagens WHERE codBanner = '" . $dadosBanner['codBanner'] . "' ORDER BY codBannerImagem ASC LIMIT 0,1";
+									$resultImagem =  $conn->query($sqlImagem);
 									$dadosImagem = $resultImagem->fetch_assoc();
 
 									if ($dadosImagem['extBannerImagem'] != "") {
@@ -29,23 +47,17 @@
 													$target = "";
 												}
 ?>
-											<li class="imagem"><a class="imagem-banner" <?php echo $target; ?> title="<?php echo $dadosBanner['nomeBanner']; ?>" href="<?php echo $dadosBanner['linkBanner']; ?>" <?php if (strpos($dadosBanner['linkBanner'], 'api.whatsapp.com') !== false) { ?> onClick="event.preventDefault(); abrirAcesso('<?php echo $dadosBanner['linkBanner']; ?>');" <?php } ?> style="width:100%; height: 100vh; background:transparent url('<?php echo $configUrlGer . 'f/banners/' . $dadosImagem['codBanner'] . '-' . $dadosImagem['codBannerImagem'] . '-W.webp'; ?>') center center no-repeat;"> </a></li>
+											<li class="imagem"><a class="imagem-banner" <?php echo $target; ?> title="<?php echo $dadosBanner['nomeBanner']; ?>" href="<?php echo $dadosBanner['linkBanner']; ?>" <?php if (strpos($dadosBanner['linkBanner'], 'api.whatsapp.com') !== false) { ?> onClick="event.preventDefault(); abrirAcesso('<?php echo $dadosBanner['linkBanner']; ?>');" <?php } ?> style="width:100%; height:100vh; background:transparent url('<?php echo $configUrlGer . 'f/banners/' . $dadosImagem['codBanner'] . '-' . $dadosImagem['codBannerImagem'] . '-O.' . $dadosImagem['extBannerImagem']; ?>') center center no-repeat;background-size: cover;"> </a></li>
 <?php
 											} else {
 ?>
-												<li class="imagem-banner" style="width:100%; height:100vh; background:transparent url('<?php echo $configUrlGer . 'f/banners/' . $dadosImagem['codBanner'] . '-' . $dadosImagem['codBannerImagem'] . '-W.webp'; ?>') center center no-repeat;">
-													<div id="repete-filtro-banner" style="position: absolute; top:25%; left: 322px; z-index: 50;">
-<?php 
-														include('capa/filtro.php'); 
-?>
-													</div> 
-												</li>
+												<li class="imagem-banner" style="width:100%; height:100vh; background:transparent url('<?php echo $configUrlGer . 'f/banners/' . $dadosImagem['codBanner'] . '-' . $dadosImagem['codBannerImagem'] . '-O.' . $dadosImagem['extBannerImagem'];; ?>') center center no-repeat;background-size: cover;"></li>
 <?php
 											}
 										} else {
 ?>
 											<li class="imagem-banner">
-												<video id="video" class="vid" disablePictureInPicture controlsList="nodownload" style="min-width: 100%; min-height: 100%; width: 100%; display:block;" src="<?php echo $configUrlGer . 'f/banners/' . $dadosImagem['codBanner'] . '-' . $dadosImagem['codBannerImagem'] . '-O.' . $dadosImagem['extBannerImagem']; ?>" type="video/mp4" loop muted autoplay></video>
+												<video id="video" class="vid" poster="<?php echo $configUrl . 'f/i/quebrado/igreja.png'; ?>" disablePictureInPicture autoplay  poster="<?php echo $configUrl. 'f/i/quebrado/igreja.png'; ?>"  controlsList="nodownload" style="width: 100vw; height: 100vh; object-fit: cover; display: block;" src="<?php echo $configUrlGer . 'f/banners/' . $dadosImagem['codBanner'] . '-' . $dadosImagem['codBannerImagem'] . '-O.' . $dadosImagem['extBannerImagem']; ?>" type="video/mp4" loop muted></video>
 											</li>
 <?php
 										}
@@ -72,21 +84,9 @@
 						lazyLoad: true,
 						lazyLoad: true,
 						autoWidth: false,
-						autoplayHoverPause: false,
-						margin: 0,
-						nav: false,
-						dots: true
+						autoplayHoverPause: false
+
 					});
 				</script>
 			</div>
 		</div>
-	</div>
-	<script>
-		function scrollToDestaque() {	
-			const target = document.getElementById('repete-destaques');
-			if (target) {
-				const offset = target.getBoundingClientRect().top + window.pageYOffset - 90;
-				window.scrollTo({ top: offset, behavior: 'smooth' });
-			}
-		}
-	</script>
